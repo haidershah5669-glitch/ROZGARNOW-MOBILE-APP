@@ -1,72 +1,50 @@
-# RozgarNow - Connecting Hands, Building Futures
+# RozgarNow — Mobile App (Expo / React Native)
 
-RozgarNow is an AI-powered, two-sided marketplace designed to connect skilled daily-wage workers with employers in Pakistan. This project provides a high-fidelity frontend MVP built with React Native and Expo, featuring complete flows for Workers, Employers, and Administrators.
+RozgarNow is a two-sided daily-wage job marketplace app connecting **Workers**, **Employers**, and **Admins**, built with **Expo + Expo Router + NativeWind**, matching the original Stitch design system (colors, typography, spacing).
 
-## 🚀 Tech Stack
-- **Framework**: React Native with Expo (SDK 50+)
-- **Navigation**: Expo Router (File-based navigation)
-- **Styling**: NativeWind (Tailwind CSS for React Native)
-- **State Management**: React Context API + Local Storage
-- **Icons**: Lucide React Native & Material Symbols
-- **Animations**: Reanimated 3 & CSS Shaders
+## What's included
+- Full navigation: Auth/Onboarding → Role Selection → Worker / Employer / Admin dashboards
+- 32 screens covering signup, login, OTP, job browsing, job details, applying, wallet, chat, job posting, applicant management, admin moderation, user management, verification
+- Shared design system matching the Stitch export (primary green `#006b2c`, Work Sans typography)
+- Mock data + in-memory state (no backend yet — see Limitations)
 
-## 📦 Project Structure
-```text
-/rozgarnow
-├── app/                  # Expo Router navigation
-│   ├── (auth)/           # Authentication (Login, Signup, OTP)
-│   ├── (worker)/         # Worker experience (Dashboard, Jobs, Wallet)
-│   ├── (employer)/       # Employer experience (Post Job, Applicants)
-│   ├── (admin)/          # Administrative controls & Moderation
-│   └── index.js          # App entry point (Splash & Onboarding)
-├── assets/               # Brand assets (Logo, Splash, Icons)
-├── components/           # Shared UI components (TopAppBar, BottomNav)
-├── context/              # Global state (User, Jobs, Applications)
-├── styles/               # Design system tokens (Tailwind config)
-├── design.md             # Design system documentation
-└── app.json              # Expo/Android configuration
+## 1. Install prerequisites (one-time)
+- Install **Node.js LTS**: https://nodejs.org
+- Create a free **Expo account**: https://expo.dev/signup
+
+## 2. Install project dependencies
+Open a terminal in this folder and run:
+```bash
+npm install
 ```
 
-## 🛠️ Installation & Setup
-1. **Clone the project**
-2. **Install dependencies**:
-   ```bash
-   npm install
-   ```
-3. **Start the development server**:
-   ```bash
-   npx expo start
-   ```
+## 3. Run the app locally (to preview on your phone)
+```bash
+npx expo start
+```
+Scan the QR code with the **Expo Go** app (Android/iOS) to preview instantly — no build needed.
 
-## 🧪 Demo Accounts
-Access the platform using these pre-configured demo routes:
-- **Worker**: Continue as Worker on Login Screen
-- **Employer**: Continue as Employer on Login Screen
-- **Admin**: Continue as Admin on Login Screen
+## 4. Build a real, installable APK
+```bash
+npm install -g eas-cli
+eas login
+eas build:configure
+eas build --platform android --profile preview
+```
+This uploads your project to Expo's cloud build servers. After 5–15 minutes, you'll get a **download link** for a real `.apk` file you can install on any Android phone.
 
-## 📱 Android APK Build Instructions (Expo/EAS)
-To build a standalone Android APK for testing:
-1. **Login to EAS**:
-   ```bash
-   eas login
-   ```
-2. **Configure project**:
-   ```bash
-   eas build:configure
-   ```
-3. **Run APK build (Preview Profile)**:
-   ```bash
-   eas build --platform android --profile preview
-   ```
-*This will generate a direct download link for the APK.*
+> The `eas build` command needs to be run on **your own computer** since it requires your Expo account login.
 
-## 🚧 Current Limitations
-- **Mock Data**: All job postings, applicants, and transactions are currently simulated locally.
-- **Map View**: Job locations use a high-fidelity map placeholder.
-- **Payments**: Wallet withdrawals are frontend simulations (no real banking integration).
+## Demo accounts
+On the Login screen, use the **"Continue as Worker / Employer / Admin"** buttons for instant access to each role's experience — no real backend required yet.
 
-## 🔮 Future Roadmap
-- Integration with Google Maps API.
-- Real-time backend with Node.js & PostgreSQL.
-- JazzCash/EasyPaisa API integration for live payments.
-- AI-driven job matching and verification.
+## Current limitations
+- All jobs, applicants, wallet transactions, and users are **mock/local data** (resets on app restart)
+- No real payments, maps, or push notifications yet
+- No real backend/database — everything runs in-memory via React Context
+
+## Suggested next steps
+- Connect a real backend (Firebase, Supabase, or Node.js + PostgreSQL)
+- Integrate Google Maps for the job map view
+- Add JazzCash/EasyPaisa APIs for real wallet payments
+- Add push notifications for new jobs/messages
