@@ -1,0 +1,430 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>RozgarNow - Applicant Management</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed": "#7ffc97",
+                    "primary-fixed-dim": "#62df7d",
+                    "tertiary-fixed": "#ffd9de",
+                    "surface-tint": "#006e2d",
+                    "on-secondary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "surface-container": "#e5eeff",
+                    "primary-container": "#00873a",
+                    "on-secondary-fixed-variant": "#783200",
+                    "on-primary-container": "#f7fff2",
+                    "background": "#f8f9ff",
+                    "outline": "#6e7b6c",
+                    "on-tertiary-container": "#fffbff",
+                    "tertiary": "#a72d51",
+                    "on-surface": "#0b1c30",
+                    "tertiary-container": "#c74669",
+                    "secondary-fixed": "#ffdbca",
+                    "inverse-on-surface": "#eaf1ff",
+                    "secondary": "#9d4300",
+                    "on-primary": "#ffffff",
+                    "warning-container": "#FFEDD5",
+                    "inverse-surface": "#213145",
+                    "on-primary-fixed": "#002109",
+                    "on-primary-fixed-variant": "#005320",
+                    "on-secondary-fixed": "#341100",
+                    "surface-dim": "#D5DCD1",
+                    "surface-container-low": "#eff4ff",
+                    "tertiary-fixed-dim": "#ffb2bf",
+                    "secondary-fixed-dim": "#ffb690",
+                    "error-container": "#ffdad6",
+                    "success-container": "#DCFCE7",
+                    "surface-bright": "#f8f9ff",
+                    "surface": "#f8f9ff",
+                    "primary": "#006b2c",
+                    "outline-variant": "#bdcaba",
+                    "secondary-container": "#fd761a",
+                    "surface-light": "#F4FCF0",
+                    "on-background": "#0b1c30",
+                    "on-secondary-container": "#5c2400",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-high": "#dce9ff",
+                    "on-surface-variant": "#3e4a3d",
+                    "on-tertiary-fixed-variant": "#8a143c",
+                    "info-blue": "#0284C7",
+                    "error": "#ba1a1a",
+                    "on-tertiary-fixed": "#3f0016",
+                    "on-error": "#ffffff",
+                    "surface-variant": "#d3e4fe",
+                    "inverse-primary": "#62df7d",
+                    "surface-container-highest": "#d3e4fe",
+                    "surface-container-lowest": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "grid-margin": "24px",
+                    "base": "4px",
+                    "grid-gutter": "16px",
+                    "section-padding": "32px",
+                    "component-gap": "12px"
+            },
+            "fontFamily": {
+                    "headline-sm": ["Work Sans"],
+                    "headline-md": ["Work Sans"],
+                    "label-md": ["Work Sans"],
+                    "body-sm": ["Work Sans"],
+                    "title-lg": ["Work Sans"],
+                    "headline-lg": ["Work Sans"],
+                    "label-sm": ["Work Sans"],
+                    "body-md": ["Work Sans"],
+                    "body-lg": ["Work Sans"],
+                    "label-lg": ["Work Sans"]
+            },
+            "fontSize": {
+                    "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                    "body-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+                    "title-lg": ["18px", {"lineHeight": "26px", "fontWeight": "600"}],
+                    "headline-lg": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700"}],
+                    "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .icon-fill-1 {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface-light min-h-screen font-sans text-on-surface flex flex-col overflow-x-hidden">
+<!-- TopAppBar (From JSON) -->
+<header class="bg-surface dark:bg-on-surface w-full top-0 sticky border-b border-outline-variant dark:border-outline flat no shadows z-40">
+<div class="flex items-center justify-between px-grid-margin h-16 w-full max-w-[1440px] mx-auto">
+<div class="flex items-center gap-4">
+<button class="md:hidden text-on-surface-variant dark:text-outline-variant cursor-pointer active:opacity-70 flex items-center justify-center p-2 rounded-full hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-2xl" data-icon="menu">menu</span>
+</button>
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed">RozgarNow</div>
+</div>
+<div class="flex items-center gap-2 md:gap-4">
+<!-- Desktop Nav Items injected here to keep structure clean -->
+<nav class="hidden md:flex items-center gap-1 mr-4">
+<a class="flex items-center gap-2 px-4 py-2 rounded-full text-on-surface-variant dark:text-outline-variant hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors font-label-md text-label-md cursor-pointer active:opacity-70" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="dashboard">dashboard</span>
+                        Dashboard
+                    </a>
+<a class="flex items-center gap-2 px-4 py-2 rounded-full text-on-surface-variant dark:text-outline-variant hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors font-label-md text-label-md cursor-pointer active:opacity-70" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="add_circle">add_circle</span>
+                        Post Job
+                    </a>
+<a class="flex items-center gap-2 px-4 py-2 rounded-full text-primary dark:text-primary-fixed bg-primary-container/20 font-label-md text-label-md cursor-pointer active:opacity-70" href="#">
+<span class="material-symbols-outlined text-lg icon-fill-1" data-icon="people" data-weight="fill">people</span>
+                        Applicants
+                    </a>
+<a class="flex items-center gap-2 px-4 py-2 rounded-full text-on-surface-variant dark:text-outline-variant hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors font-label-md text-label-md cursor-pointer active:opacity-70" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="chat">chat</span>
+                        Chat
+                    </a>
+</nav>
+<button class="text-on-surface-variant dark:text-outline-variant cursor-pointer active:opacity-70 flex items-center justify-center p-2 rounded-full hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors relative">
+<span class="material-symbols-outlined text-2xl" data-icon="notifications">notifications</span>
+<span class="absolute top-1 right-1 w-2.5 h-2.5 bg-error rounded-full border-2 border-surface"></span>
+</button>
+<div class="hidden md:block w-8 h-8 rounded-full overflow-hidden border border-outline-variant ml-2 cursor-pointer">
+<img class="w-full h-full object-cover" data-alt="Professional portrait of a corporate recruitment manager in a well-lit office setting. Light mode aesthetic, warm, confident expression. Soft lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGSTR35Ihu1pkLdS5IW9sINw5jRMnqbChMqLAWTAyxao8_MZDVt3zWUxlXbk8_oUF973xVLNZlU0An_IkEFSVrRtQFFbNtLzv5sw6UuTARe4po-_PMA9jmvCbmBKhHC9Ys9BGp3fmGWjU4Lkkk37Tl3jIV_WbMrPn0V6GuDIHgMhju1yUUuHnmiWzSS0Ud6ZCTX8UhRlAy0JMIJLAnifSX3hdxJxSYuuBdIO7DQsRpT6pcs7xdfoE">
+</div>
+</div>
+</div>
+</header>
+<!-- Main Workspace -->
+<main class="flex-grow w-full max-w-[1440px] mx-auto pb-24 md:pb-12 pt-6 px-4 md:px-grid-margin grid grid-cols-1 md:grid-cols-12 gap-grid-gutter md:gap-grid-margin">
+<!-- Workspace Content Area (Span full on mobile, 12 cols on desktop since nav is top) -->
+<div class="col-span-1 md:col-span-12 flex flex-col gap-section-padding">
+<!-- Page Header & Analytics Widget -->
+<section class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 bg-surface-container-lowest border border-outline-variant rounded-xl p-6 shadow-sm">
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-3">
+<span class="font-headline-lg text-headline-lg text-on-surface">Applicants</span>
+<div class="px-3 py-1 rounded-full bg-surface-variant text-on-surface-variant font-label-md text-label-md flex items-center gap-1 cursor-pointer hover:bg-surface-container-highest transition-colors">
+                            Senior Electrician
+                            <span class="material-symbols-outlined text-sm" data-icon="arrow_drop_down">arrow_drop_down</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Review and manage candidates for this open position.</p>
+</div>
+<div class="flex gap-4">
+<div class="flex flex-col pr-4 border-r border-outline-variant">
+<span class="font-headline-md text-headline-md text-primary">24</span>
+<span class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="group">group</span> Total
+                        </span>
+</div>
+<div class="flex flex-col pr-4 border-r border-outline-variant">
+<span class="font-headline-md text-headline-md text-secondary-container">12</span>
+<span class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="pending">pending</span> Pending
+                        </span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface">5</span>
+<span class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="how_to_reg">how_to_reg</span> Shortlisted
+                        </span>
+</div>
+</div>
+</section>
+<!-- Tabs & Filters -->
+<section class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 border-b border-outline-variant pb-2">
+<div class="flex gap-6 overflow-x-auto w-full sm:w-auto no-scrollbar"><button class="relative pb-2 font-label-lg text-label-lg text-primary border-b-2 border-primary whitespace-nowrap">Pending (12)</button><button class="relative pb-2 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap">Accepted (3)</button><button class="relative pb-2 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap">Work Started (2)</button><button class="relative pb-2 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap">Completed (5)</button><button class="relative pb-2 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap">Rejected (9)</button></div>
+<div class="flex items-center gap-2 w-full sm:w-auto">
+<div class="relative flex-grow sm:flex-grow-0">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg" data-icon="search">search</span>
+<input class="w-full sm:w-64 pl-10 pr-4 py-2 bg-surface-container-lowest border border-outline-variant rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" placeholder="Search name or skill..." type="text">
+</div>
+<button class="p-2 border border-outline-variant rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-xl" data-icon="filter_list">filter_list</span>
+</button>
+</div>
+</section>
+<!-- Applicant Cards Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-component-gap">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-component-gap flex flex-col gap-4 hover:shadow-md transition-shadow group relative overflow-hidden">
+<!-- Top Info -->
+<div class="flex justify-between items-start">
+<div class="flex gap-3 items-center">
+<div class="w-12 h-12 rounded-full overflow-hidden border border-outline-variant shrink-0">
+<img class="w-full h-full object-cover" data-alt="Portrait of a young male South Asian electrician in a clean work uniform, smiling confidently. Bright, well-lit, professional light mode aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVZXrirE7wXpTm0E4SWCvX8qeehs7TU2yQo7mAqEpJfjU5CAfJEE2Ck__LHWmnL7UZdXvQbxBVhHCsDGfOg4bjLn8ev-AVxWogX491AK-1y7PI1BuUYiRbr9tMJJinGphvmA3rvI6Thtam4NPubw8PmzZVltb3Tm5iolgSY_6TO0uYTKn30eBXA5FdI371I8AavcjqN7YXI4qR_eH8Zx_2VaCLyjqT11AeXa3OuR82pLjv4vaGHHQ">
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<h3 class="font-title-lg text-title-lg text-on-surface line-clamp-1">Ahmed Khan</h3>
+<span class="bg-success-container text-primary px-2 py-0.5 rounded-full font-label-sm text-label-sm flex items-center gap-0.5 whitespace-nowrap"><span class="material-symbols-outlined text-[12px] icon-fill-1" data-icon="check_circle">check_circle</span> Completed</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Applied 2 hours ago</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-lg icon-fill-1" data-icon="star" data-weight="fill">star</span>
+<span class="font-label-lg text-label-lg">4.8</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">(42 jobs)</span>
+</div>
+</div>
+<hr class="border-outline-variant/50">
+<!-- Data Points -->
+<div class="grid grid-cols-2 gap-y-3 gap-x-2">
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Experience</span>
+<span class="font-body-md text-body-md text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline" data-icon="work_history">work_history</span> 5 Years
+                            </span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Distance</span>
+<span class="font-body-md text-body-md text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline" data-icon="location_on">location_on</span> 2.5 km away
+                            </span>
+</div>
+<div class="col-span-2 flex flex-col gap-1.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Top Skills</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="bg-surface-variant text-on-surface font-body-sm text-body-sm px-2 py-1 rounded-md border border-outline-variant/30">Commercial Wiring</span>
+<span class="bg-surface-variant text-on-surface font-body-sm text-body-sm px-2 py-1 rounded-md border border-outline-variant/30">Solar Panels</span>
+<span class="bg-surface-variant text-on-surface font-body-sm text-body-sm px-2 py-1 rounded-md border border-outline-variant/30">+2 more</span>
+</div>
+</div>
+</div>
+<!-- Actions -->
+<div class="mt-auto pt-2 flex items-center justify-between gap-2"><div class="flex gap-2"><button class="w-10 h-10 rounded-full border border-outline-variant text-on-surface-variant flex items-center justify-center hover:bg-surface-container-low transition-colors" title="Chat"><span class="material-symbols-outlined" data-icon="chat">chat</span></button><button class="w-10 h-10 rounded-full border border-outline-variant text-on-surface-variant flex items-center justify-center hover:bg-surface-container-low transition-colors" title="View Profile"><span class="material-symbols-outlined" data-icon="visibility">visibility</span></button></div><div class="flex gap-2"><button class="px-3 py-2 rounded-lg border border-primary text-primary font-label-md text-label-md hover:bg-primary/10 transition-colors flex items-center gap-1"><span class="material-symbols-outlined text-[18px]" data-icon="payments">payments</span> Mark Paid</button><button class="px-3 py-2 rounded-lg bg-secondary text-on-secondary font-label-md text-label-md hover:bg-secondary-container transition-colors flex items-center gap-1 shadow-sm"><span class="material-symbols-outlined text-[18px]" data-icon="star">star</span> Rate</button></div></div>
+<!-- Match Score Indicator Overlay -->
+<div class="absolute top-0 right-0 w-16 h-16 pointer-events-none opacity-10">
+<svg class="w-full h-full text-primary transform translate-x-4 -translate-y-4" viewBox="0 0 100 100">
+<circle class="origin-center -rotate-90" cx="50" cy="50" fill="none" r="40" stroke="currentColor" stroke-dasharray="200" stroke-dashoffset="40" stroke-width="12"></circle>
+</svg>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-component-gap flex flex-col gap-4 hover:shadow-md transition-shadow group relative overflow-hidden">
+<div class="flex justify-between items-start">
+<div class="flex gap-3 items-center">
+<div class="w-12 h-12 rounded-full overflow-hidden border border-outline-variant shrink-0">
+<img class="w-full h-full object-cover" data-alt="Portrait of a middle-aged male tradesman with a beard, wearing safety gear. Serious but approachable expression. Corporate modern light mode aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0geihxmcK7Pjt1JYGBUuIrIQcpRvtTzuLT1_CsroeE72-7_5cqsrXLyTQRo2pY82q6ktASK2H9dni2fcy8R_QIhql3-veMxgIfTN0BC6ypqAgauBW4gI33LSxWrTp70lfbjG1eg6fOibdlfa5iENH9mStgJkIi7-kbzH2qoq05fsvrsE-tBl018sa2DjdqZUPgdqTzGT3vp2ix3zo2q6MP6NT_QDwrdgAIXb7uMYFZ9j-BDvODtQ">
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<h3 class="font-title-lg text-title-lg text-on-surface line-clamp-1">Tariq Mahmood</h3>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Applied 5 hours ago</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-lg icon-fill-1" data-icon="star" data-weight="fill">star</span>
+<span class="font-label-lg text-label-lg">4.5</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">(18 jobs)</span>
+</div>
+</div>
+<hr class="border-outline-variant/50">
+<div class="grid grid-cols-2 gap-y-3 gap-x-2">
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Experience</span>
+<span class="font-body-md text-body-md text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline" data-icon="work_history">work_history</span> 8 Years
+                            </span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Distance</span>
+<span class="font-body-md text-body-md text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline" data-icon="location_on">location_on</span> 5.1 km away
+                            </span>
+</div>
+<div class="col-span-2 flex flex-col gap-1.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Top Skills</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="bg-surface-variant text-on-surface font-body-sm text-body-sm px-2 py-1 rounded-md border border-outline-variant/30">Industrial Wiring</span>
+<span class="bg-surface-variant text-on-surface font-body-sm text-body-sm px-2 py-1 rounded-md border border-outline-variant/30">Generator Maintenance</span>
+</div>
+</div>
+</div>
+<div class="mt-auto pt-2 flex items-center justify-between gap-2">
+<div class="flex gap-2">
+<button class="w-10 h-10 rounded-full border border-outline-variant text-on-surface-variant flex items-center justify-center hover:bg-surface-container-low transition-colors" title="Chat">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+</button>
+<button class="w-10 h-10 rounded-full border border-outline-variant text-on-surface-variant flex items-center justify-center hover:bg-surface-container-low transition-colors" title="View Profile">
+<span class="material-symbols-outlined" data-icon="visibility">visibility</span>
+</button>
+</div>
+<div class="flex gap-2">
+<button class="px-4 py-2 rounded-lg border border-tertiary text-tertiary font-label-md text-label-md hover:bg-error-container transition-colors">
+                                Reject
+                            </button>
+<button class="px-4 py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container hover:text-on-primary-container transition-colors flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[18px]" data-icon="how_to_reg">how_to_reg</span>
+                                Accept
+                            </button>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-component-gap flex flex-col gap-4 hover:shadow-md transition-shadow group relative overflow-hidden">
+<div class="flex justify-between items-start">
+<div class="flex gap-3 items-center">
+<div class="w-12 h-12 rounded-full overflow-hidden border border-outline-variant shrink-0 bg-surface-container-high flex items-center justify-center text-primary font-title-lg text-title-lg">
+                                ZA
+                            </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<h3 class="font-title-lg text-title-lg text-on-surface line-clamp-1">Zain Ali</h3>
+<span class="bg-secondary-container/10 text-secondary-container px-2 py-0.5 rounded-full font-label-sm text-label-sm flex items-center gap-0.5 whitespace-nowrap">
+<span class="material-symbols-outlined text-[12px] icon-fill-1" data-icon="error" data-weight="fill">error</span> Urgent Need
+                                    </span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Applied 1 day ago</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-lg icon-fill-1" data-icon="star" data-weight="fill">star</span>
+<span class="font-label-lg text-label-lg">4.9</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">(105 jobs)</span>
+</div>
+</div>
+<hr class="border-outline-variant/50">
+<div class="grid grid-cols-2 gap-y-3 gap-x-2">
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Experience</span>
+<span class="font-body-md text-body-md text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline" data-icon="work_history">work_history</span> 12 Years
+                            </span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Distance</span>
+<span class="font-body-md text-body-md text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline" data-icon="location_on">location_on</span> 12.4 km away
+                            </span>
+</div>
+<div class="col-span-2 flex flex-col gap-1.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Top Skills</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="bg-surface-variant text-on-surface font-body-sm text-body-sm px-2 py-1 rounded-md border border-outline-variant/30">Master Electrician</span>
+<span class="bg-surface-variant text-on-surface font-body-sm text-body-sm px-2 py-1 rounded-md border border-outline-variant/30">HVAC Electrical</span>
+<span class="bg-surface-variant text-on-surface font-body-sm text-body-sm px-2 py-1 rounded-md border border-outline-variant/30">Troubleshooting</span>
+</div>
+</div>
+</div>
+<div class="mt-auto pt-2 flex items-center justify-between gap-2">
+<div class="flex gap-2">
+<button class="w-10 h-10 rounded-full border border-outline-variant text-on-surface-variant flex items-center justify-center hover:bg-surface-container-low transition-colors" title="Chat">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+</button>
+<button class="w-10 h-10 rounded-full border border-outline-variant text-on-surface-variant flex items-center justify-center hover:bg-surface-container-low transition-colors" title="View Profile">
+<span class="material-symbols-outlined" data-icon="visibility">visibility</span>
+</button>
+</div>
+<div class="flex gap-2">
+<button class="px-4 py-2 rounded-lg border border-tertiary text-tertiary font-label-md text-label-md hover:bg-error-container transition-colors">
+                                Reject
+                            </button>
+<button class="px-4 py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container hover:text-on-primary-container transition-colors flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[18px]" data-icon="how_to_reg">how_to_reg</span>
+                                Accept
+                            </button>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- BottomNavBar (From JSON) - Mobile Only -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 py-2 bg-surface-container-lowest dark:bg-inverse-surface border-t border-outline-variant dark:border-outline shadow-sm z-50">
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant py-1 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-all duration-200 active:scale-95 flex-1 rounded-lg" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="dashboard">dashboard</span>
+<span class="font-label-sm text-label-sm mt-1">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant py-1 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-all duration-200 active:scale-95 flex-1 rounded-lg" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="add_circle">add_circle</span>
+<span class="font-label-sm text-label-sm mt-1">Post Job</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container dark:bg-primary-fixed dark:text-on-primary-fixed rounded-full px-4 py-1 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-all duration-200 active:scale-95 flex-1" href="#">
+<span class="material-symbols-outlined text-2xl icon-fill-1" data-icon="people" data-weight="fill">people</span>
+<span class="font-label-sm text-label-sm mt-1">Applicants</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant py-1 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-all duration-200 active:scale-95 flex-1 rounded-lg" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="chat">chat</span>
+<span class="font-label-sm text-label-sm mt-1">Chat</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant py-1 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-all duration-200 active:scale-95 flex-1 rounded-lg" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="business">business</span>
+<span class="font-label-sm text-label-sm mt-1">Profile</span>
+</a>
+</nav>
+
+
+</body></html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RozgarNow - Create Employer Account</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-primary-container": "#f7fff2",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-low": "#eff6ea",
+                        "inverse-surface": "#2b322b",
+                        "secondary-fixed": "#ffdbca",
+                        "on-tertiary-fixed-variant": "#8a143c",
+                        "inverse-on-surface": "#ecf3e7",
+                        "on-secondary-fixed": "#341100",
+                        "on-surface": "#171d16",
+                        "surface-bright": "#f4fcf0",
+                        "surface-dim": "#d5dcd1",
+                        "outline": "#6e7b6c",
+                        "inverse-primary": "#62df7d",
+                        "surface-variant": "#dde5d9",
+                        "surface": "#f4fcf0",
+                        "on-primary-fixed-variant": "#005320",
+                        "on-background": "#171d16",
+                        "on-secondary-container": "#5c2400",
+                        "secondary": "#9d4300",
+                        "tertiary": "#a72d51",
+                        "on-secondary-fixed-variant": "#783200",
+                        "tertiary-container": "#c74668",
+                        "background": "#f4fcf0",
+                        "surface-tint": "#006e2d",
+                        "tertiary-fixed": "#ffd9de",
+                        "on-secondary": "#ffffff",
+                        "outline-variant": "#bdcaba",
+                        "secondary-fixed-dim": "#ffb690",
+                        "surface-container-highest": "#dde5d9",
+                        "on-tertiary-container": "#fffbff",
+                        "tertiary-fixed-dim": "#ffb2bf",
+                        "primary-container": "#00873a",
+                        "on-primary-fixed": "#002109",
+                        "error-container": "#ffdad6",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-primary": "#ffffff",
+                        "surface-container-high": "#e3eadf",
+                        "error": "#ba1a1a",
+                        "surface-container": "#e9f0e5",
+                        "primary-fixed-dim": "#62df7d",
+                        "primary": "#006b2c",
+                        "on-error": "#ffffff",
+                        "secondary-container": "#fd761a",
+                        "on-surface-variant": "#3e4a3d",
+                        "on-tertiary-fixed": "#3f0016",
+                        "primary-fixed": "#7ffc97"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "sm": "8px",
+                        "gutter-mobile": "12px",
+                        "margin-mobile": "16px",
+                        "xs": "4px",
+                        "md": "16px",
+                        "xl": "32px",
+                        "base": "4px",
+                        "lg": "24px"
+                    },
+                    fontFamily: {
+                        "body-lg": ["Work Sans"],
+                        "label-sm": ["Work Sans"],
+                        "headline-md": ["Work Sans"],
+                        "headline-lg": ["Work Sans"],
+                        "body-sm": ["Work Sans"],
+                        "body-md": ["Work Sans"],
+                        "headline-sm": ["Work Sans"],
+                        "label-md": ["Work Sans"]
+                    },
+                    fontSize: {
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600" }],
+                        "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "headline-lg": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+                        "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-lg min-h-screen flex flex-col justify-center items-center p-4">
+<!-- Main Card Container -->
+<main class="w-full max-w-md bg-surface-container-lowest rounded-xl shadow-lg border border-outline-variant/30 overflow-hidden flex flex-col relative z-10">
+<!-- Header Section -->
+<header class="pt-xl px-lg pb-md text-center">
+<h1 class="font-headline-lg text-headline-lg text-on-surface mb-2">Create Employer Account</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Hire the best workers for your needs.</p>
+</header>
+<!-- Form Section -->
+<form class="flex-1 overflow-y-auto px-lg pb-lg space-y-md">
+<!-- Profile Photo Upload -->
+<div class="flex flex-col items-center justify-center mb-6">
+<div class="w-24 h-24 rounded-lg border-2 border-dashed border-outline-variant flex flex-col items-center justify-center cursor-pointer hover:bg-surface-container-low transition-colors group relative overflow-hidden">
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors text-3xl mb-1" data-icon="photo_camera" style="font-variation-settings: 'FILL' 0;">photo_camera</span>
+<span class="font-label-sm text-label-sm text-outline group-hover:text-primary transition-colors">Upload</span>
+<!-- Invisible File Input for interactivity illusion -->
+<input accept="image/*" class="absolute inset-0 opacity-0 cursor-pointer" type="file"/>
+</div>
+<p class="mt-2 font-label-sm text-label-sm text-on-surface-variant text-center">Profile Photo/Logo</p>
+</div>
+<!-- Input Fields -->
+<div class="space-y-4">
+<!-- Full Name -->
+<div class="flex flex-col">
+<label class="font-label-md text-label-md text-on-surface mb-1" for="fullName">Full Name</label>
+<input class="bg-surface border border-outline-variant rounded-lg px-md py-sm font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow" id="fullName" placeholder="e.g. Ahmed Khan" type="text"/>
+</div>
+<!-- Business/Company Name -->
+<div class="flex flex-col">
+<label class="font-label-md text-label-md text-on-surface mb-1" for="companyName">Business/Company Name</label>
+<input class="bg-surface border border-outline-variant rounded-lg px-md py-sm font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow" id="companyName" placeholder="e.g. Khan Construction Ltd." type="text"/>
+</div>
+<!-- Phone -->
+<div class="flex flex-col">
+<label class="font-label-md text-label-md text-on-surface mb-1" for="phone">Phone</label>
+<input class="bg-surface border border-outline-variant rounded-lg px-md py-sm font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow" id="phone" placeholder="+92 300 1234567" type="tel"/>
+</div>
+<!-- City & Area -->
+<div class="flex flex-col">
+<label class="font-label-md text-label-md text-on-surface mb-1" for="cityArea">City &amp; Area</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline-variant" data-icon="location_on" style="font-variation-settings: 'FILL' 0;">location_on</span>
+<input class="w-full bg-surface border border-outline-variant rounded-lg pl-10 pr-md py-sm font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow" id="cityArea" placeholder="e.g. Clifton, Karachi" type="text"/>
+</div>
+</div>
+<!-- About Business (Text area) -->
+<div class="flex flex-col">
+<label class="font-label-md text-label-md text-on-surface mb-1" for="about">About Business</label>
+<textarea class="bg-surface border border-outline-variant rounded-lg px-md py-sm font-body-md text-on-surface resize-none focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow" id="about" placeholder="Briefly describe your business needs..." rows="3"></textarea>
+</div>
+</div>
+<!-- Action Button -->
+<div class="pt-6">
+<button class="w-full bg-primary text-on-primary font-headline-sm text-headline-sm py-3 rounded-lg hover:opacity-90 active:scale-95 transition-all shadow-md flex justify-center items-center gap-2" type="button">
+                    Register
+                    <span class="material-symbols-outlined" data-icon="arrow_forward" style="font-variation-settings: 'FILL' 0;">arrow_forward</span>
+</button>
+</div>
+</form>
+<!-- Footer -->
+<footer class="bg-surface-container py-md text-center border-t border-outline-variant/30">
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Already have an account? <a class="text-secondary font-semibold hover:underline" href="#">Login</a>
+</p>
+</footer>
+</main>
+<!-- Decorative Background Elements -->
+<div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+<!-- Abstract gradient orbs for a modern, corporate feel -->
+<div class="absolute -top-[20%] -left-[10%] w-[50vw] h-[50vw] bg-primary/5 rounded-full blur-[100px]"></div>
+<div class="absolute -bottom-[20%] -right-[10%] w-[60vw] h-[60vw] bg-secondary-container/5 rounded-full blur-[120px]"></div>
+</div>
+</body></html>

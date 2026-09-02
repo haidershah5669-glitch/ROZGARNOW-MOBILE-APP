@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RozgarNow - Profile</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed": "#341100",
+                        "inverse-on-surface": "#ecf3e7",
+                        "on-background": "#171d16",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-surface": "#2b322b",
+                        "surface-container-highest": "#dde5d9",
+                        "on-secondary-container": "#5c2400",
+                        "error": "#ba1a1a",
+                        "surface": "#f4fcf0",
+                        "on-tertiary-fixed-variant": "#8a143c",
+                        "tertiary-fixed": "#ffd9de",
+                        "secondary-fixed": "#ffdbca",
+                        "on-surface-variant": "#3e4a3d",
+                        "secondary-fixed-dim": "#ffb690",
+                        "on-surface": "#171d16",
+                        "on-tertiary-container": "#fffbff",
+                        "surface-tint": "#006e2d",
+                        "surface-container-low": "#eff6ea",
+                        "surface-container-high": "#e3eadf",
+                        "tertiary-container": "#c74668",
+                        "on-error": "#ffffff",
+                        "on-primary-container": "#f7fff2",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-fixed-variant": "#783200",
+                        "surface-bright": "#f4fcf0",
+                        "on-error-container": "#93000a",
+                        "primary-fixed": "#7ffc97",
+                        "primary-fixed-dim": "#62df7d",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed": "#002109",
+                        "on-tertiary": "#ffffff",
+                        "outline-variant": "#bdcaba",
+                        "secondary-container": "#fd761a",
+                        "surface-dim": "#d5dcd1",
+                        "on-primary-fixed-variant": "#005320",
+                        "on-primary": "#ffffff",
+                        "inverse-primary": "#62df7d",
+                        "surface-variant": "#dde5d9",
+                        "tertiary": "#a72d51",
+                        "primary": "#006b2c",
+                        "outline": "#6e7b6c",
+                        "tertiary-fixed-dim": "#ffb2bf",
+                        "primary-container": "#00873a",
+                        "background": "#f4fcf0",
+                        "secondary": "#9d4300",
+                        "surface-container": "#e9f0e5",
+                        "on-tertiary-fixed": "#3f0016"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "md": "16px",
+                        "gutter-mobile": "12px",
+                        "margin-mobile": "16px",
+                        "lg": "24px",
+                        "base": "4px",
+                        "sm": "8px",
+                        "xs": "4px",
+                        "xl": "32px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Work Sans"],
+                        "label-md": ["Work Sans"],
+                        "body-md": ["Work Sans"],
+                        "headline-lg": ["Work Sans"],
+                        "headline-md": ["Work Sans"],
+                        "headline-sm": ["Work Sans"],
+                        "body-sm": ["Work Sans"],
+                        "label-sm": ["Work Sans"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "headline-lg": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+                        "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+                        "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+                        "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { background-color: #F8FAFC; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .card-shadow { box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.04); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="text-on-background font-body-md pb-24 md:pb-0 pt-16">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-on-background w-full top-0 sticky border-b border-outline-variant dark:border-outline z-40">
+<div class="flex justify-between items-center px-margin-mobile py-sm w-full">
+<button class="text-on-surface-variant dark:text-outline-variant hover:bg-surface-container-low dark:hover:bg-surface-container-highest active:opacity-80 transition-opacity p-2 rounded-full">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed">RozgarNow</h1>
+<button class="text-on-surface-variant dark:text-outline-variant hover:bg-surface-container-low dark:hover:bg-surface-container-highest active:opacity-80 transition-opacity p-2 rounded-full">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-margin-mobile md:px-lg grid grid-cols-1 md:grid-cols-4 gap-lg pt-lg">
+<!-- Navigation Drawer (Desktop) -->
+<aside class="hidden md:flex flex-col col-span-1 h-[calc(100vh-80px)] sticky top-24 bg-surface-container dark:bg-inverse-surface shadow-xl rounded-xl py-lg">
+<div class="flex items-center px-4 mb-6">
+<img alt="User profile photo" class="w-12 h-12 rounded-full object-cover mr-4" data-alt="A professional headshot of a middle-eastern man in his 30s, looking confidently at the camera. He is wearing a clean, modern blue collared shirt. The lighting is soft and natural, suggesting a trustworthy and dependable character. The background is slightly blurred and neutral." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUL5P9UYerwCJXMkw57tx8ApXW66xlfz1uH-7aH7P1VPa6V-HP2Smn1iny80-cu3PF6gAj9k5ZwzpS3oOsdsvH-ReBcnvQLR6J2xuArVuQVVzDZeR8F5Ju0N6Rvt7P9Zywfj6N9SnU_6w22yHtNBGJAq3dnhKLnx_oZJXppRWctbHK2cfzkGY41E2LtS0mP831lS9RMi_EUaE0_9VHaywmJx-fQHSh9yB9LKgIb2DdCv7s5chPZao"/>
+<div class="left_align">
+<h2 class="font-headline-sm text-headline-sm text-primary">Ahmed Khan</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Verified Worker</p>
+<p class="font-label-sm text-label-sm text-primary">Rating: 4.8/5</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-4 text-on-surface-variant dark:text-outline-variant px-4 py-3 hover:bg-surface-container-highest dark:hover:bg-surface-variant active:bg-surface-variant transition-colors rounded-lg mx-2" href="#">
+<span class="material-symbols-outlined" data-icon="assignment_turned_in">assignment_turned_in</span>
+<span class="font-label-md text-label-md">My Applications</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant dark:text-outline-variant px-4 py-3 hover:bg-surface-container-highest dark:hover:bg-surface-variant active:bg-surface-variant transition-colors rounded-lg mx-2" href="#">
+<span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+<span class="font-label-md text-label-md">Post a Job</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant dark:text-outline-variant px-4 py-3 hover:bg-surface-container-highest dark:hover:bg-surface-variant active:bg-surface-variant transition-colors rounded-lg mx-2" href="#">
+<span class="material-symbols-outlined" data-icon="stars">stars</span>
+<span class="font-label-md text-label-md">Saved Workers</span>
+</a>
+<a class="flex items-center gap-4 bg-primary-container text-on-primary-container font-semibold rounded-lg mx-2 px-4 py-3 hover:bg-surface-container-highest dark:hover:bg-surface-variant active:bg-surface-variant transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-label-md text-label-md">Settings</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant dark:text-outline-variant px-4 py-3 hover:bg-surface-container-highest dark:hover:bg-surface-variant active:bg-surface-variant transition-colors rounded-lg mx-2" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span class="font-label-md text-label-md">Help Center</span>
+</a>
+</nav>
+</aside>
+<!-- Main Content Area -->
+<div class="col-span-1 md:col-span-3 flex flex-col gap-lg">
+<!-- Profile Header (Mobile) -->
+<section class="md:hidden bg-surface-container-lowest card-shadow rounded-xl p-md flex flex-col items-center text-center relative overflow-hidden">
+<div class="absolute top-0 w-full h-24 bg-primary/10"></div>
+<div class="relative mt-12 mb-4">
+<img alt="Profile" class="w-24 h-24 rounded-full border-4 border-surface-container-lowest object-cover z-10 relative" data-alt="A professional headshot of a middle-eastern man in his 30s, looking confidently at the camera. He is wearing a clean, modern blue collared shirt. The lighting is soft and natural, suggesting a trustworthy and dependable character. The background is slightly blurred and neutral." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2dAg_uqVYxRZ21I4qMQ08GnGIGsLPwX_TI0fZZZWrd8JKvTrLEeOSJawIIS1_gJiWjbcWDBMpz-KnkWwBSJWvMP22bGRFWmpEekMKL6E8K53Z5OHd1oj0sgCOJ7DOUYHZUrwJ78ulUFq7nzjHyC3OhI7sxqqc_INVFxDpe1dChWjBhOFgUVkGwsYymzBRDXjVxL66ajWHLcTd6NuL5yAdAxwU9czXwYKr_Oa5vh2k6YacuswqOa8"/>
+<div class="absolute bottom-0 right-0 bg-primary text-on-primary rounded-full p-1 border-2 border-surface-container-lowest z-20">
+<span class="material-symbols-outlined text-[16px]" data-icon="verified">verified</span>
+</div>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-1">Ahmed Khan</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Electrician &amp; General Handyman</p>
+<div class="flex gap-4">
+<button class="bg-[#16A34A] text-[#FFFFFF] font-label-md text-label-md px-6 py-2 rounded-lg hover:bg-[#15803d] transition-colors">Edit Profile</button>
+<button class="border border-[#16A34A] text-[#16A34A] font-label-md text-label-md px-6 py-2 rounded-lg hover:bg-primary/5 transition-colors">Share</button>
+</div>
+</section>
+<!-- Desktop Header variant -->
+<section class="hidden md:flex bg-surface-container-lowest card-shadow rounded-xl p-lg items-center justify-between">
+<div class="flex items-center gap-6">
+<div class="relative">
+<img alt="Profile" class="w-24 h-24 rounded-full object-cover" data-alt="A professional headshot of a middle-eastern man in his 30s, looking confidently at the camera. He is wearing a clean, modern blue collared shirt. The lighting is soft and natural, suggesting a trustworthy and dependable character. The background is slightly blurred and neutral." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCB1q8FVMtw7PikKje57Msh02rEGzQNtCSPcFS1e8z7YTZoMmegExwz_-_VG3Cju57AxftI7Au_wWw9a5rvUdbQHlk2KsIQryFPd7O3gs2MjvCznfdYff1SRdueNdb6tNomWn7QBj1qF34EZbRTNmSQd5z3Rs8ecXMLSyCGOL3TtNSYk-7jG8LPqSNELLtfFX4UCHfmCgy_ZgwOok3ST5CQseGvSDD147gSLMNQezBPeVmlGcYaZLY"/>
+<div class="absolute bottom-0 right-0 bg-primary text-on-primary rounded-full p-1 border-2 border-surface-container-lowest">
+<span class="material-symbols-outlined text-[16px]" data-icon="verified">verified</span>
+</div>
+</div>
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-1">Ahmed Khan</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-2">Electrician &amp; General Handyman</p>
+<span class="bg-primary/10 text-primary font-label-sm text-label-sm px-3 py-1 rounded-full">Available Now</span>
+</div>
+</div>
+<div class="flex gap-4">
+<button class="border border-[#16A34A] text-[#16A34A] font-label-md text-label-md px-6 py-2 rounded-lg hover:bg-primary/5 transition-colors">Share</button>
+<button class="bg-[#16A34A] text-[#FFFFFF] font-label-md text-label-md px-6 py-2 rounded-lg hover:bg-[#15803d] transition-colors">Edit Profile</button>
+</div>
+</section>
+<!-- StatCards Grid -->
+<section class="grid grid-cols-2 md:grid-cols-4 gap-md">
+<div class="bg-surface-container-lowest card-shadow rounded-xl p-md flex flex-col items-center text-center">
+<div class="bg-primary-container/20 text-primary rounded-full w-12 h-12 flex items-center justify-center mb-3">
+<span class="material-symbols-outlined" data-icon="task_alt">task_alt</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">42</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Jobs Completed</p>
+</div>
+<div class="bg-surface-container-lowest card-shadow rounded-xl p-md flex flex-col items-center text-center">
+<div class="bg-primary-container/20 text-primary rounded-full w-12 h-12 flex items-center justify-center mb-3">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Rs. 85k</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Earnings</p>
+</div>
+<div class="bg-surface-container-lowest card-shadow rounded-xl p-md flex flex-col items-center text-center">
+<div class="bg-primary-container/20 text-primary rounded-full w-12 h-12 flex items-center justify-center mb-3">
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">4.8</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Rating</p>
+</div>
+<div class="bg-surface-container-lowest card-shadow rounded-xl p-md flex flex-col items-center text-center">
+<div class="bg-primary-container/20 text-primary rounded-full w-12 h-12 flex items-center justify-center mb-3">
+<span class="material-symbols-outlined" data-icon="schedule">schedule</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">98%</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">On-Time</p>
+</div>
+</section>
+<!-- Recent Activity Bento -->
+<section class="bg-surface-container-lowest card-shadow rounded-xl p-lg">
+<div class="flex justify-between items-center mb-6">
+<h3 class="font-headline-md text-headline-md text-on-surface">Recent Activity</h3>
+<a class="text-primary font-label-md text-label-md hover:underline" href="#">View All</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<div class="border border-outline-variant rounded-lg p-md flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-2">
+<span class="bg-[#F1F5F9] font-label-sm text-label-sm px-2 py-1 rounded">Electrical Repair</span>
+<span class="text-primary font-label-sm text-label-sm bg-primary/10 px-2 py-1 rounded">Completed</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-1">Ceiling Fan Installation</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mb-4">
+<span class="material-symbols-outlined text-[16px]" data-icon="location_on">location_on</span> DHA Phase 5, Lahore
+                            </p>
+</div>
+<div class="flex justify-between items-center pt-4 border-t border-outline-variant">
+<span class="font-headline-sm text-headline-sm text-on-surface">Rs. 1500</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">2 days ago</span>
+</div>
+</div>
+<div class="border border-outline-variant rounded-lg p-md flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-2">
+<span class="bg-[#F1F5F9] font-label-sm text-label-sm px-2 py-1 rounded">Plumbing</span>
+<span class="text-[#F97316] font-label-sm text-label-sm bg-[#F97316]/10 px-2 py-1 rounded">Pending</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-1">Fix Leaking Pipe</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mb-4">
+<span class="material-symbols-outlined text-[16px]" data-icon="location_on">location_on</span> Gulberg III, Lahore
+                            </p>
+</div>
+<div class="flex justify-between items-center pt-4 border-t border-outline-variant">
+<span class="font-headline-sm text-headline-sm text-on-surface">Rs. 2000</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Today</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Settings & Help Center Links (Mobile Only) -->
+<section class="md:hidden bg-surface-container-lowest card-shadow rounded-xl p-md flex flex-col gap-2">
+<a class="flex items-center justify-between p-3 rounded-lg hover:bg-surface-container-low transition-colors" href="#">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="settings">settings</span>
+<span class="font-label-md text-label-md text-on-surface">Settings</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="chevron_right">chevron_right</span>
+</a>
+<hr class="border-outline-variant my-1 mx-3"/>
+<a class="flex items-center justify-between p-3 rounded-lg hover:bg-surface-container-low transition-colors" href="#">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="help">help</span>
+<span class="font-label-md text-label-md text-on-surface">Help Center</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="chevron_right">chevron_right</span>
+</a>
+</section>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="bg-surface dark:bg-on-background fixed bottom-0 w-full z-50 h-16 border-t border-outline-variant dark:border-outline shadow-sm md:hidden">
+<div class="flex flex-row justify-around items-center px-gutter-mobile w-full pb-safe h-full">
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant hover:bg-surface-container dark:hover:bg-surface-container-highest active:scale-95 transition-transform duration-150 p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-sm text-label-sm mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant hover:bg-surface-container dark:hover:bg-surface-container-highest active:scale-95 transition-transform duration-150 p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="work">work</span>
+<span class="font-label-sm text-label-sm mt-1">Jobs</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant hover:bg-surface-container dark:hover:bg-surface-container-highest active:scale-95 transition-transform duration-150 p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="chat_bubble">chat_bubble</span>
+<span class="font-label-sm text-label-sm mt-1">Messages</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary dark:text-primary-fixed bg-primary-container/10 rounded-xl px-4 py-1 active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label-sm text-label-sm mt-1">Profile</span>
+</a>
+</div>
+</nav>
+</body></html>

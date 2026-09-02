@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>RozgarNow - Chat Details</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-low": "#eff6ea",
+                        "on-secondary-fixed-variant": "#783200",
+                        "on-error-container": "#93000a",
+                        "on-surface": "#171d16",
+                        "primary-fixed-dim": "#62df7d",
+                        "tertiary-fixed": "#ffd9de",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed-variant": "#005320",
+                        "on-background": "#171d16",
+                        "surface-container-highest": "#dde5d9",
+                        "on-tertiary-fixed": "#3f0016",
+                        "tertiary-fixed-dim": "#ffb2bf",
+                        "on-error": "#ffffff",
+                        "surface-variant": "#dde5d9",
+                        "tertiary": "#a72d51",
+                        "surface": "#f4fcf0",
+                        "surface-container": "#e9f0e5",
+                        "surface-container-high": "#e3eadf",
+                        "on-primary-fixed": "#002109",
+                        "tertiary-container": "#c74668",
+                        "on-tertiary-fixed-variant": "#8a143c",
+                        "on-tertiary": "#ffffff",
+                        "outline": "#6e7b6c",
+                        "surface-dim": "#d5dcd1",
+                        "inverse-on-surface": "#ecf3e7",
+                        "surface-tint": "#006e2d",
+                        "primary": "#006b2c",
+                        "on-secondary-fixed": "#341100",
+                        "primary-fixed": "#7ffc97",
+                        "secondary-fixed": "#ffdbca",
+                        "surface-bright": "#f4fcf0",
+                        "inverse-surface": "#2b322b",
+                        "on-secondary-container": "#5c2400",
+                        "outline-variant": "#bdcaba",
+                        "on-secondary": "#ffffff",
+                        "primary-container": "#00873a",
+                        "secondary-container": "#fd761a",
+                        "background": "#f4fcf0",
+                        "on-tertiary-container": "#fffbff",
+                        "secondary": "#9d4300",
+                        "error-container": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "on-surface-variant": "#3e4a3d",
+                        "inverse-primary": "#62df7d",
+                        "error": "#ba1a1a",
+                        "on-primary-container": "#f7fff2",
+                        "secondary-fixed-dim": "#ffb690"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter-mobile": "12px",
+                        "md": "16px",
+                        "base": "4px",
+                        "margin-mobile": "16px",
+                        "xs": "4px",
+                        "sm": "8px",
+                        "lg": "24px",
+                        "xl": "32px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Work Sans"],
+                        "headline-lg": ["Work Sans"],
+                        "body-sm": ["Work Sans"],
+                        "label-sm": ["Work Sans"],
+                        "headline-md": ["Work Sans"],
+                        "label-md": ["Work Sans"],
+                        "body-lg": ["Work Sans"],
+                        "headline-sm": ["Work Sans"]
+                    },
+                    "fontSize": {
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "headline-lg": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+                        "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+                        "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600" }],
+                        "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Work Sans', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .fill-icon { font-variation-settings: 'FILL' 1; }
+        
+        /* Hide scrollbar for clean look in chat */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        .chat-bg {
+            background-color: #F8FAFC;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface flex flex-col h-screen overflow-hidden">
+<!-- TopAppBar Semantic Shell: Suppressed for Sub-page (Transactional/Task-focused) -->
+<!-- Creating a custom header for Chat Details -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile py-sm bg-surface shadow-[0px_2px_8px_rgba(0,0,0,0.04)] border-b border-outline-variant/30">
+<div class="flex items-center gap-3">
+<button aria-label="Go back" class="text-on-surface-variant hover:bg-surface-variant rounded-full p-2 transition-colors active:scale-95">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<div class="flex items-center gap-3">
+<div class="relative">
+<img alt="Employer Avatar" class="w-10 h-10 rounded-full object-cover border border-outline-variant" data-alt="A professional headshot of a middle-aged South Asian male employer wearing a crisp light blue shirt, looking approachable and reliable. The background is a brightly lit, modern office space with subtle indoor plants. High quality, soft lighting, reflecting a corporate and trustworthy vibe suitable for a job platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCysQH-aFLPlnyb-Yp3mmWZELuBoYasjiQoswvrzazy7V2vipz93ajOm8uim44qnpWQzMyKzjSt93tGcwk9Na_Qsvs7Z52Md_FezeilaEbSqaKNQZNYRlGan3e7CSmoirHUhk7XhR78jDALMISnLS6IeZAvgAFjEb2eVKTCM3jum352sPSef_KjaiabxLGCSCA1dc0Drzh6rM5TQY8U2X8ekg-rU4UHRd-pgsbyb3C9vQmLOKSgJ6M"/>
+<div class="absolute bottom-0 right-0 w-3 h-3 bg-[#16A34A] rounded-full border-2 border-surface"></div>
+</div>
+<div class="flex flex-col">
+<h1 class="font-headline-sm text-headline-sm text-on-surface m-0 leading-tight">Ahmed Khan</h1>
+<div class="flex items-center gap-1 text-[#16A34A]">
+<span class="material-symbols-outlined fill-icon text-[14px]" data-icon="shield" data-weight="fill">shield</span>
+<span class="font-label-sm text-label-sm m-0">Verified Employer</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-1">
+<button class="text-on-surface-variant hover:bg-surface-variant rounded-full p-2 transition-colors active:scale-95">
+<span class="material-symbols-outlined" data-icon="call">call</span>
+</button>
+<button class="text-on-surface-variant hover:bg-surface-variant rounded-full p-2 transition-colors active:scale-95">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+</header>
+<!-- Chat Canvas -->
+<main class="flex-1 overflow-y-auto no-scrollbar pt-[72px] pb-[80px] px-margin-mobile chat-bg flex flex-col gap-lg bg-surface-container-low">
+<!-- Date Divider -->
+<div class="flex justify-center mt-md mb-xs">
+<span class="font-label-sm text-label-sm bg-surface-variant text-on-surface-variant px-3 py-1 rounded-full shadow-sm">Today</span>
+</div>
+<!-- System Message -->
+<div class="flex justify-center mb-md">
+<div class="bg-primary-container/20 text-on-primary-fixed-variant font-body-sm text-body-sm px-4 py-2 rounded-lg text-center max-w-[85%] border border-primary/10">
+                You applied for "Senior Electrician - Phase 5". Ahmed Khan accepted your application.
+            </div>
+</div>
+<!-- Employer Message (Text) -->
+<div class="flex flex-col items-start gap-1 max-w-[80%]">
+<div class="bg-surface text-on-surface border border-outline-variant shadow-[0px_2px_8px_rgba(0,0,0,0.04)] rounded-2xl rounded-tl-sm px-4 py-2.5">
+<p class="font-body-md text-body-md m-0">Asalam o Alaikum! Thank you for applying. Are you available to start work tomorrow morning?</p>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant ml-1">09:41 AM</span>
+</div>
+<!-- Worker Message (Text) -->
+<div class="flex flex-col items-end gap-1 max-w-[80%] self-end">
+<div class="bg-primary text-on-primary rounded-2xl rounded-tr-sm px-4 py-2.5 shadow-sm">
+<p class="font-body-md text-body-md m-0">Walaikum Asalam sir. Yes, I am available. What time should I reach?</p>
+</div>
+<div class="flex items-center gap-1 mr-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">09:45 AM</span>
+<span class="material-symbols-outlined text-[#16A34A] text-[14px]" data-icon="done_all">done_all</span>
+</div>
+</div>
+<!-- Employer Message (Voice) -->
+<div class="flex flex-col items-start gap-1 max-w-[80%]">
+<div class="bg-surface text-on-surface border border-outline-variant shadow-[0px_2px_8px_rgba(0,0,0,0.04)] rounded-2xl rounded-tl-sm px-4 py-2.5 flex items-center gap-3 w-64">
+<button class="bg-primary text-on-primary rounded-full p-1.5 shrink-0 hover:bg-primary-container hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined fill-icon text-[20px]" data-icon="play_arrow" data-weight="fill">play_arrow</span>
+</button>
+<div class="flex-1">
+<!-- Fake Audio Waveform -->
+<div class="flex items-center gap-0.5 h-6">
+<div class="w-1 bg-outline-variant rounded-full h-2"></div>
+<div class="w-1 bg-outline-variant rounded-full h-4"></div>
+<div class="w-1 bg-outline-variant rounded-full h-6"></div>
+<div class="w-1 bg-outline-variant rounded-full h-3"></div>
+<div class="w-1 bg-outline-variant rounded-full h-5"></div>
+<div class="w-1 bg-outline-variant rounded-full h-2"></div>
+<div class="w-1 bg-outline-variant rounded-full h-1"></div>
+<div class="w-1 bg-outline-variant rounded-full h-3"></div>
+<div class="w-1 bg-outline-variant rounded-full h-4"></div>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant shrink-0">0:12</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant ml-1">09:50 AM</span>
+</div>
+<!-- Worker Message (Image) -->
+<div class="flex flex-col items-end gap-1 max-w-[80%] self-end">
+<div class="bg-primary p-1 rounded-2xl rounded-tr-sm shadow-sm relative group cursor-pointer">
+<img alt="Shared tools image" class="w-48 h-48 object-cover rounded-xl" data-alt="A close up photo of a professional set of electrician tools neatly arranged in an open toolbox. The lighting is bright and clear, showing high quality, well-maintained tools. The aesthetic is practical, professional, and trustworthy, suitable for a skilled worker showcasing their equipment in a corporate marketplace app." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWUdOIM232n_BMbi4f5qP4dh2yYA3fwRcC-1MUKN763CxWHK29qy5OoKkVd88uolNux_65I0_3LPM4lNY4r79nsYvozIzLLlOFjd9HyD4BZVuNQhAbgi4oskYpg1fOEyHmMKVE-1CAFf2MURc5J24prm8G9zf_4Xbz9LopMgf2WF5bY4oiMaUOgv09v-KaqHUuJcmpit7vrwNe193p6bRZnP_qFyMYAfj_3pkwOldukMOVb9batEs"/>
+<div class="absolute inset-0 bg-black/20 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-[32px]" data-icon="zoom_in">zoom_in</span>
+</div>
+</div>
+<div class="flex items-center gap-1 mr-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">09:55 AM</span>
+<span class="material-symbols-outlined text-outline text-[14px]" data-icon="done">done</span>
+</div>
+</div>
+<!-- Spacer to ensure bottom content isn't hidden behind input -->
+<div class="h-4 w-full shrink-0"></div>
+</main>
+<!-- Bottom Input Bar -->
+<div class="fixed bottom-0 w-full bg-surface border-t border-outline-variant px-margin-mobile py-sm z-50 shadow-[0px_-2px_10px_rgba(0,0,0,0.05)] pb-safe">
+<div class="flex items-end gap-2">
+<button class="text-on-surface-variant hover:bg-surface-variant rounded-full p-2.5 transition-colors active:scale-95 shrink-0 self-center">
+<span class="material-symbols-outlined text-[24px]" data-icon="attach_file">attach_file</span>
+</button>
+<div class="flex-1 bg-surface-container-high rounded-3xl border border-outline-variant focus-within:border-primary focus-within:ring-1 focus-within:ring-primary transition-all flex items-end px-4 py-2 min-h-[44px] max-h-32">
+<textarea class="w-full bg-transparent border-none focus:ring-0 resize-none font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant p-0 m-0 max-h-24 overflow-y-auto no-scrollbar" oninput="this.style.height = ''; this.style.height = this.scrollHeight + 'px'" placeholder="Type a message..." rows="1"></textarea>
+</div>
+<button class="bg-primary text-on-primary hover:bg-primary-container hover:text-on-primary-container rounded-full w-11 h-11 flex items-center justify-center transition-colors active:scale-95 shrink-0 self-center shadow-sm">
+<span class="material-symbols-outlined fill-icon" data-icon="send" data-weight="fill">send</span>
+</button>
+</div>
+</div>
+<!-- BottomNavBar Semantic Shell: Suppressed as this is a task-focused sub-page -->
+<!-- FAB Semantic Shell: Suppressed for transactional/detail screen -->
+</body></html>

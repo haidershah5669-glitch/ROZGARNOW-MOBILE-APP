@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RozgarNow - Home</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary-fixed": "#341100",
+                      "inverse-on-surface": "#ecf3e7",
+                      "on-background": "#171d16",
+                      "surface-container-lowest": "#ffffff",
+                      "inverse-surface": "#2b322b",
+                      "surface-container-highest": "#dde5d9",
+                      "on-secondary-container": "#5c2400",
+                      "error": "#ba1a1a",
+                      "surface": "#f4fcf0",
+                      "on-tertiary-fixed-variant": "#8a143c",
+                      "tertiary-fixed": "#ffd9de",
+                      "secondary-fixed": "#ffdbca",
+                      "on-surface-variant": "#3e4a3d",
+                      "secondary-fixed-dim": "#ffb690",
+                      "on-surface": "#171d16",
+                      "on-tertiary-container": "#fffbff",
+                      "surface-tint": "#006e2d",
+                      "surface-container-low": "#eff6ea",
+                      "surface-container-high": "#e3eadf",
+                      "tertiary-container": "#c74668",
+                      "on-error": "#ffffff",
+                      "on-primary-container": "#f7fff2",
+                      "on-secondary": "#ffffff",
+                      "on-secondary-fixed-variant": "#783200",
+                      "surface-bright": "#f4fcf0",
+                      "on-error-container": "#93000a",
+                      "primary-fixed": "#7ffc97",
+                      "primary-fixed-dim": "#62df7d",
+                      "error-container": "#ffdad6",
+                      "on-primary-fixed": "#002109",
+                      "on-tertiary": "#ffffff",
+                      "outline-variant": "#bdcaba",
+                      "secondary-container": "#fd761a",
+                      "surface-dim": "#d5dcd1",
+                      "on-primary-fixed-variant": "#005320",
+                      "on-primary": "#ffffff",
+                      "inverse-primary": "#62df7d",
+                      "surface-variant": "#dde5d9",
+                      "tertiary": "#a72d51",
+                      "primary": "#006b2c",
+                      "outline": "#6e7b6c",
+                      "tertiary-fixed-dim": "#ffb2bf",
+                      "primary-container": "#00873a",
+                      "background": "#f4fcf0",
+                      "secondary": "#9d4300",
+                      "surface-container": "#e9f0e5",
+                      "on-tertiary-fixed": "#3f0016"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "md": "16px",
+                      "gutter-mobile": "12px",
+                      "margin-mobile": "16px",
+                      "lg": "24px",
+                      "base": "4px",
+                      "sm": "8px",
+                      "xs": "4px",
+                      "xl": "32px"
+              },
+              "fontFamily": {
+                      "body-lg": [
+                              "Work Sans"
+                      ],
+                      "label-md": [
+                              "Work Sans"
+                      ],
+                      "body-md": [
+                              "Work Sans"
+                      ],
+                      "headline-lg": [
+                              "Work Sans"
+                      ],
+                      "headline-md": [
+                              "Work Sans"
+                      ],
+                      "headline-sm": [
+                              "Work Sans"
+                      ],
+                      "body-sm": [
+                              "Work Sans"
+                      ],
+                      "label-sm": [
+                              "Work Sans"
+                      ]
+              },
+              "fontSize": {
+                      "body-lg": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.01em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-md": [
+                              "20px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-sm": [
+                              "18px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-sm": [
+                              "11px",
+                              {
+                                      "lineHeight": "14px",
+                                      "letterSpacing": "0.03em",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col md:flex-row pb-safe md:pb-0">
+<!-- Mobile Top App Bar (Only visible on md:hidden) -->
+<header class="md:hidden bg-surface dark:bg-on-background w-full top-0 sticky flex justify-between items-center px-margin-mobile py-sm border-b border-outline-variant dark:border-outline z-50 flat no shadows">
+<div class="flex items-center gap-2">
+<button class="text-primary dark:text-primary-fixed hover:bg-surface-container-low dark:hover:bg-surface-container-highest active:opacity-80 transition-opacity p-2 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed tracking-tight">RozgarNow</h1>
+</div>
+<button class="text-primary dark:text-primary-fixed hover:bg-surface-container-low dark:hover:bg-surface-container-highest active:opacity-80 transition-opacity p-2 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+</header>
+<!-- SideNav (Only visible on hidden md:flex) -->
+<aside class="hidden md:flex flex-col h-full py-lg w-72 rounded-r-xl bg-surface-container dark:bg-inverse-surface shadow-xl fixed left-0 top-0 z-40">
+<div class="px-lg pb-md">
+<h1 class="font-headline-md text-headline-md text-primary font-bold tracking-tight">RozgarNow</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 italic">Kaam Milay Asani Say</p>
+</div>
+<div class="flex items-center gap-md px-lg py-md border-y border-outline-variant/30 mb-md">
+<img alt="User profile photo" class="w-12 h-12 rounded-full object-cover shadow-sm" data-alt="A professional headshot of a reliable male construction worker named Ahmed Khan, smiling slightly, wearing a clean safety vest over a t-shirt. The background is slightly blurred but suggests a well-lit, active workspace. Shot in a clear, modern corporate style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJRv1AQn94rwKdKCbXrB0thlIJUVkxoeyf5Ddr1pP8UzpNM_iczb0Cb_xgdFol3pypKQ_cCpTR3vGRxYkDDvNfJSiDP_FaMcFZCFv4TzxoFp38yAMLu2KGY4LRwm4sq_kJ7MaqL0dPY0Hnsu4AXdO50jd-1txOQYTIisFPg9HYmk7ezsC5IhwObxv_-Ns5N7sdekpq-BzYc45qhvSZSfqN_fvXm2u_VnzN4lxTQObH5Zb8GQxsPmM"/>
+<div>
+<h3 class="font-label-md text-label-md text-on-surface font-semibold">Ahmed Khan</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary" data-icon="verified" data-weight="fill">verified</span> Verified Worker
+                </p>
+<p class="font-label-sm text-label-sm text-secondary-container">Rating: 4.8/5</p>
+</div>
+</div>
+<nav class="flex-1 flex flex-col gap-2 px-2">
+<!-- Simulated Nav Links based on Drawer JSON for desktop -->
+<a class="flex items-center gap-md text-on-surface-variant dark:text-outline-variant px-4 py-3 hover:bg-surface-container-highest dark:hover:bg-surface-variant active:bg-surface-variant transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="assignment_turned_in">assignment_turned_in</span>
+<span class="font-label-md text-label-md">My Applications</span>
+</a>
+<a class="flex items-center gap-md text-on-surface-variant dark:text-outline-variant px-4 py-3 hover:bg-surface-container-highest dark:hover:bg-surface-variant active:bg-surface-variant transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+<span class="font-label-md text-label-md">Post a Job</span>
+</a>
+<a class="flex items-center gap-md text-on-surface-variant dark:text-outline-variant px-4 py-3 hover:bg-surface-container-highest dark:hover:bg-surface-variant active:bg-surface-variant transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="stars">stars</span>
+<span class="font-label-md text-label-md">Saved Workers</span>
+</a>
+<a class="flex items-center gap-md text-on-surface-variant dark:text-outline-variant px-4 py-3 hover:bg-surface-container-highest dark:hover:bg-surface-variant active:bg-surface-variant transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-label-md text-label-md">Settings</span>
+</a>
+<a class="flex items-center gap-md text-on-surface-variant dark:text-outline-variant px-4 py-3 hover:bg-surface-container-highest dark:hover:bg-surface-variant active:bg-surface-variant transition-colors rounded-lg mt-auto mb-4" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span class="font-label-md text-label-md">Help Center</span>
+</a>
+</nav>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 md:ml-72 flex flex-col w-full">
+<!-- Dashboard Hero Area -->
+<section class="px-margin-mobile md:px-lg py-lg bg-surface-container-low rounded-b-xl md:rounded-bl-none shadow-[0px_2px_8px_rgba(0,0,0,0.04)]">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-2">Find work that fits you.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg italic">Kaam Milay Asani Say</p>
+<div class="relative w-full max-w-2xl">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-outline" data-icon="search">search</span>
+</div>
+<input class="block w-full pl-10 pr-3 py-3 border border-outline-variant rounded-lg bg-surface-container-lowest text-on-surface focus:ring-primary focus:border-primary font-body-md sm:text-sm shadow-sm transition-all outline-none" placeholder="Search jobs, skills, or locations..." type="text"/>
+</div>
+</section>
+<div class="px-margin-mobile md:px-lg py-lg flex flex-col gap-xl max-w-6xl w-full mx-auto">
+<!-- Categories Scroll -->
+<section>
+<div class="flex justify-between items-center mb-md">
+<h3 class="font-headline-md text-headline-md text-on-surface">Categories</h3>
+<button class="font-label-md text-label-md text-primary hover:underline">View All</button>
+</div>
+<div class="flex gap-md overflow-x-auto pb-sm snap-x no-scrollbar">
+<!-- Category Card 1 -->
+<div class="flex-none w-32 h-32 bg-surface-container-lowest rounded-xl shadow-[0px_2px_8px_rgba(0,0,0,0.04)] border border-outline-variant/20 flex flex-col items-center justify-center p-sm snap-start hover:shadow-md transition-shadow cursor-pointer">
+<div class="w-12 h-12 rounded-full bg-primary-container/20 flex items-center justify-center mb-sm text-primary">
+<span class="material-symbols-outlined text-[28px]" data-icon="construction">construction</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface text-center">Construction</span>
+</div>
+<!-- Category Card 2 -->
+<div class="flex-none w-32 h-32 bg-surface-container-lowest rounded-xl shadow-[0px_2px_8px_rgba(0,0,0,0.04)] border border-outline-variant/20 flex flex-col items-center justify-center p-sm snap-start hover:shadow-md transition-shadow cursor-pointer">
+<div class="w-12 h-12 rounded-full bg-secondary-container/20 flex items-center justify-center mb-sm text-secondary-container">
+<span class="material-symbols-outlined text-[28px]" data-icon="local_shipping">local_shipping</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface text-center">Delivery</span>
+</div>
+<!-- Category Card 3 -->
+<div class="flex-none w-32 h-32 bg-surface-container-lowest rounded-xl shadow-[0px_2px_8px_rgba(0,0,0,0.04)] border border-outline-variant/20 flex flex-col items-center justify-center p-sm snap-start hover:shadow-md transition-shadow cursor-pointer">
+<div class="w-12 h-12 rounded-full bg-tertiary-container/20 flex items-center justify-center mb-sm text-tertiary">
+<span class="material-symbols-outlined text-[28px]" data-icon="cleaning_services">cleaning_services</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface text-center">Cleaning</span>
+</div>
+<!-- Category Card 4 -->
+<div class="flex-none w-32 h-32 bg-surface-container-lowest rounded-xl shadow-[0px_2px_8px_rgba(0,0,0,0.04)] border border-outline-variant/20 flex flex-col items-center justify-center p-sm snap-start hover:shadow-md transition-shadow cursor-pointer">
+<div class="w-12 h-12 rounded-full bg-primary-container/20 flex items-center justify-center mb-sm text-primary">
+<span class="material-symbols-outlined text-[28px]" data-icon="electrical_services">electrical_services</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface text-center">Electrical</span>
+</div>
+<!-- Category Card 5 -->
+<div class="flex-none w-32 h-32 bg-surface-container-lowest rounded-xl shadow-[0px_2px_8px_rgba(0,0,0,0.04)] border border-outline-variant/20 flex flex-col items-center justify-center p-sm snap-start hover:shadow-md transition-shadow cursor-pointer">
+<div class="w-12 h-12 rounded-full bg-secondary-container/20 flex items-center justify-center mb-sm text-secondary-container">
+<span class="material-symbols-outlined text-[28px]" data-icon="plumbing">plumbing</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface text-center">Plumbing</span>
+</div>
+</div>
+</section>
+<!-- Featured Jobs (Bento Grid Style) -->
+<section>
+<div class="flex justify-between items-center mb-md">
+<h3 class="font-headline-md text-headline-md text-on-surface">Featured Jobs</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<!-- Job Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0px_2px_8px_rgba(0,0,0,0.04)] border border-outline-variant/30 p-md flex flex-col justify-between hover:border-primary/50 transition-colors">
+<div class="flex justify-between items-start mb-sm">
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-1">Senior Mason Worker</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="apartment">apartment</span> BuildCo Constructors
+                                </p>
+</div>
+<span class="bg-primary/10 text-primary font-label-sm text-label-sm px-2 py-1 rounded-md">Urgent</span>
+</div>
+<div class="flex items-center gap-sm mt-2 mb-4">
+<span class="bg-surface-container py-1 px-2 rounded font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="location_on">location_on</span> Karachi
+                            </span>
+<span class="bg-surface-container py-1 px-2 rounded font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="payments">payments</span> Rs. 2000/day
+                            </span>
+</div>
+<div class="flex gap-2 mt-auto">
+<button class="flex-1 bg-primary text-on-primary font-label-md text-label-md py-2 rounded-lg hover:bg-primary/90 transition-colors">Apply Now</button>
+<button class="w-10 h-10 border border-outline-variant rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container">
+<span class="material-symbols-outlined text-[20px]" data-icon="bookmark_border">bookmark_border</span>
+</button>
+</div>
+</div>
+<!-- Job Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0px_2px_8px_rgba(0,0,0,0.04)] border border-outline-variant/30 p-md flex flex-col justify-between hover:border-primary/50 transition-colors">
+<div class="flex justify-between items-start mb-sm">
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-1">Delivery Rider</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="storefront">storefront</span> QuickMart Logistics
+                                </p>
+</div>
+</div>
+<div class="flex items-center gap-sm mt-2 mb-4">
+<span class="bg-surface-container py-1 px-2 rounded font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="location_on">location_on</span> Lahore
+                            </span>
+<span class="bg-surface-container py-1 px-2 rounded font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="payments">payments</span> Rs. 35,000/mo
+                            </span>
+</div>
+<div class="flex gap-2 mt-auto">
+<button class="flex-1 bg-primary text-on-primary font-label-md text-label-md py-2 rounded-lg hover:bg-primary/90 transition-colors">Apply Now</button>
+<button class="w-10 h-10 border border-outline-variant rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container">
+<span class="material-symbols-outlined text-[20px]" data-icon="bookmark_border">bookmark_border</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Bottom spacing for mobile nav -->
+<div class="h-24 md:hidden"></div>
+</main>
+<!-- BottomNavBar (Only visible on md:hidden) -->
+<nav class="md:hidden bg-surface dark:bg-on-background fixed bottom-0 w-full z-50 h-16 border-t border-outline-variant dark:border-outline shadow-sm flex flex-row justify-around items-center px-gutter-mobile pb-safe">
+<!-- Home (Active) -->
+<a class="flex flex-col items-center justify-center text-primary dark:text-primary-fixed bg-primary-container/10 rounded-xl px-4 py-1 active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="home" data-weight="fill">home</span>
+<span class="font-label-sm text-label-sm mt-1">Home</span>
+</a>
+<!-- Jobs (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant hover:bg-surface-container dark:hover:bg-surface-container-highest px-4 py-1 rounded-xl active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="work">work</span>
+<span class="font-label-sm text-label-sm mt-1">Jobs</span>
+</a>
+<!-- Messages (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant hover:bg-surface-container dark:hover:bg-surface-container-highest px-4 py-1 rounded-xl active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="chat_bubble">chat_bubble</span>
+<span class="font-label-sm text-label-sm mt-1">Messages</span>
+</a>
+<!-- Profile (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant hover:bg-surface-container dark:hover:bg-surface-container-highest px-4 py-1 rounded-xl active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label-sm text-label-sm mt-1">Profile</span>
+</a>
+</nav>
+<style>
+        /* Hide scrollbar for category scroll but keep functionality */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</body></html>

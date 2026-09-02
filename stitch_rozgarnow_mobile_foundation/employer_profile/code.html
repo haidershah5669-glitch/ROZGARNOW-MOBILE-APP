@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RozgarNow - Employer Profile</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed": "#7ffc97",
+                        "primary-fixed-dim": "#62df7d",
+                        "tertiary-fixed": "#ffd9de",
+                        "surface-tint": "#006e2d",
+                        "on-secondary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "surface-container": "#e5eeff",
+                        "primary-container": "#00873a",
+                        "on-secondary-fixed-variant": "#783200",
+                        "on-primary-container": "#f7fff2",
+                        "background": "#f8f9ff",
+                        "outline": "#6e7b6c",
+                        "on-tertiary-container": "#fffbff",
+                        "tertiary": "#a72d51",
+                        "on-surface": "#0b1c30",
+                        "tertiary-container": "#c74669",
+                        "secondary-fixed": "#ffdbca",
+                        "inverse-on-surface": "#eaf1ff",
+                        "secondary": "#9d4300",
+                        "on-primary": "#ffffff",
+                        "warning-container": "#FFEDD5",
+                        "inverse-surface": "#213145",
+                        "on-primary-fixed": "#002109",
+                        "on-primary-fixed-variant": "#005320",
+                        "on-secondary-fixed": "#341100",
+                        "surface-dim": "#D5DCD1",
+                        "surface-container-low": "#eff4ff",
+                        "tertiary-fixed-dim": "#ffb2bf",
+                        "secondary-fixed-dim": "#ffb690",
+                        "error-container": "#ffdad6",
+                        "success-container": "#DCFCE7",
+                        "surface-bright": "#f8f9ff",
+                        "surface": "#f8f9ff",
+                        "primary": "#006b2c",
+                        "outline-variant": "#bdcaba",
+                        "secondary-container": "#fd761a",
+                        "surface-light": "#F4FCF0",
+                        "on-background": "#0b1c30",
+                        "on-secondary-container": "#5c2400",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-high": "#dce9ff",
+                        "on-surface-variant": "#3e4a3d",
+                        "on-tertiary-fixed-variant": "#8a143c",
+                        "info-blue": "#0284C7",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed": "#3f0016",
+                        "on-error": "#ffffff",
+                        "surface-variant": "#d3e4fe",
+                        "inverse-primary": "#62df7d",
+                        "surface-container-highest": "#d3e4fe",
+                        "surface-container-lowest": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "grid-margin": "24px",
+                        "base": "4px",
+                        "grid-gutter": "16px",
+                        "section-padding": "32px",
+                        "component-gap": "12px"
+                    },
+                    "fontFamily": {
+                        "headline-sm": ["Work Sans"],
+                        "headline-md": ["Work Sans"],
+                        "label-md": ["Work Sans"],
+                        "body-sm": ["Work Sans"],
+                        "title-lg": ["Work Sans"],
+                        "headline-lg": ["Work Sans"],
+                        "label-sm": ["Work Sans"],
+                        "body-md": ["Work Sans"],
+                        "body-lg": ["Work Sans"],
+                        "label-lg": ["Work Sans"]
+                    },
+                    "fontSize": {
+                        "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+                        "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+                        "title-lg": ["18px", { "lineHeight": "26px", "fontWeight": "600" }],
+                        "headline-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Work Sans', sans-serif;
+            background-color: theme('colors.background');
+            color: theme('colors.on-surface');
+            -webkit-font-smoothing: antialiased;
+        }
+        .pb-nav {
+            padding-bottom: 80px; /* Space for bottom nav */
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="h-full flex flex-col relative">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky z-40 bg-surface border-b border-outline-variant">
+<div class="flex items-center justify-between px-grid-margin h-16 w-full max-w-[1440px] mx-auto">
+<div class="flex items-center cursor-pointer active:opacity-70 transition-colors hover:bg-surface-container-low rounded-full p-2 -ml-2 text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</div>
+<div class="font-headline-md text-headline-md font-bold text-primary">
+                RozgarNow
+            </div>
+<div class="flex items-center cursor-pointer active:opacity-70 transition-colors hover:bg-surface-container-low rounded-full p-2 -mr-2 text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-1 w-full max-w-[1440px] mx-auto px-4 md:px-grid-margin py-section-padding pb-nav flex flex-col gap-6">
+<!-- Profile Header & Main Actions -->
+<section class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 shadow-sm flex flex-col md:flex-row gap-6 items-start">
+<div class="flex-shrink-0 relative">
+<img class="w-24 h-24 rounded-lg object-cover border border-outline-variant bg-surface-container-low" data-alt="A professional corporate logo for Khan Construction Ltd, featuring modern geometric building shapes in dark green and slate gray, set against a pristine white background with subtle studio lighting, conveying trust and reliability." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXDJgyKRqnwlGbk4qFbEsiW-tInPDliPOMIsZ4qe4NMScKtUlhPXHqCPqMLW1sKoK3A5v58_Mr-5--cAwtSROSdBGarpUBNi29Ou1pm1zld9VQfcqG8P3myY-qiLwVryhROxWbxjJ0dKYYoEAdqOqbbQ_M1r5E8V50r0QJJGnyjx2igQIpZwQgWtYPY8Zt_LJvk-2jRS6OcMun105cyUHNu9uAj1AAK48LvbLKH-fEIC9BV2NlpnI"/>
+<div class="absolute -bottom-2 -right-2 bg-primary text-on-primary rounded-full p-1 border-2 border-surface-container-lowest">
+<span class="material-symbols-outlined text-[16px] leading-none" data-weight="fill" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+<div class="flex-1 flex flex-col gap-2">
+<div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface m-0">Khan Construction Ltd.</h1>
+<p class="font-title-lg text-title-lg text-on-surface-variant mt-1">Tariq Khan <span class="font-body-md text-body-md opacity-70 ml-2">Owner</span></p>
+</div>
+<div class="flex items-center gap-4 mt-2">
+<div class="flex items-center gap-1 bg-surface-container-low px-3 py-1 rounded-full border border-outline-variant">
+<span class="material-symbols-outlined text-secondary-container text-[18px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-lg text-label-lg font-bold">4.9/5</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant ml-1">(42 Reviews)</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+<span class="font-body-md text-body-md">Karachi, Sindh</span>
+</div>
+</div>
+</div>
+<div class="flex-shrink-0 w-full md:w-auto flex flex-col gap-3 md:mt-0 mt-4 border-t md:border-t-0 md:border-l border-outline-variant md:pl-6 pt-4 md:pt-0">
+<button class="w-full bg-primary text-on-primary font-label-lg text-label-lg py-2 px-6 rounded-lg hover:bg-surface-tint transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+                    Edit Profile
+                </button>
+<button class="w-full bg-transparent text-on-surface-variant border border-outline font-label-lg text-label-lg py-2 px-6 rounded-lg hover:bg-surface-container-low transition-colors">
+                    Share Profile
+                </button>
+</div>
+</section>
+<!-- Stats Grid (Bento Style) -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-component-gap">
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-4 text-on-surface-variant">
+<span class="font-label-lg text-label-lg uppercase tracking-wider">Jobs Posted</span>
+<span class="material-symbols-outlined text-primary-container bg-success-container p-2 rounded-lg">work</span>
+</div>
+<div class="flex items-end gap-2">
+<span class="font-headline-lg text-headline-lg leading-none">50</span>
+<span class="font-body-sm text-body-sm text-primary flex items-center mb-1">
+<span class="material-symbols-outlined text-[14px]">trending_up</span> +12%
+                    </span>
+</div>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-4 text-on-surface-variant">
+<span class="font-label-lg text-label-lg uppercase tracking-wider">Workers Hired</span>
+<span class="material-symbols-outlined text-info-blue bg-surface-variant p-2 rounded-lg">group</span>
+</div>
+<div class="flex items-end gap-2">
+<span class="font-headline-lg text-headline-lg leading-none">120</span>
+<span class="font-body-sm text-body-sm text-primary flex items-center mb-1">
+<span class="material-symbols-outlined text-[14px]">trending_up</span> +5%
+                    </span>
+</div>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-4 text-on-surface-variant">
+<span class="font-label-lg text-label-lg uppercase tracking-wider">Completed Jobs</span>
+<span class="material-symbols-outlined text-secondary bg-warning-container p-2 rounded-lg">task_alt</span>
+</div>
+<div class="flex items-end gap-2">
+<span class="font-headline-lg text-headline-lg leading-none">115</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mb-1">96% success rate</span>
+</div>
+</div>
+</section>
+<!-- Main Content Area: About & Reviews -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<!-- Left Column: About & Details -->
+<div class="lg:col-span-2 flex flex-col gap-6">
+<section class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 shadow-sm">
+<h2 class="font-title-lg text-title-lg mb-4 text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">business</span>
+                        About Business
+                    </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-4 leading-relaxed">
+                        Khan Construction Ltd. is a premier construction and civil engineering firm based in Karachi, specializing in commercial and residential developments. With over 15 years of industry experience, we pride ourselves on delivering high-quality projects on time and within budget. We frequently hire skilled masons, carpenters, electricians, and general laborers.
+                    </p>
+<div class="grid grid-cols-2 gap-4 mt-6 border-t border-outline-variant pt-6">
+<div>
+<span class="block font-label-md text-label-md text-on-surface-variant mb-1">Industry</span>
+<span class="font-body-md text-body-md">Construction &amp; Engineering</span>
+</div>
+<div>
+<span class="block font-label-md text-label-md text-on-surface-variant mb-1">Company Size</span>
+<span class="font-body-md text-body-md">50-200 Employees</span>
+</div>
+<div>
+<span class="block font-label-md text-label-md text-on-surface-variant mb-1">Established</span>
+<span class="font-body-md text-body-md">2008</span>
+</div>
+<div>
+<span class="block font-label-md text-label-md text-on-surface-variant mb-1">Verified Documents</span>
+<div class="flex gap-2">
+<span class="material-symbols-outlined text-primary" title="Business License">description</span>
+<span class="material-symbols-outlined text-primary" title="Tax ID">receipt_long</span>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 shadow-sm">
+<div class="flex items-center justify-between mb-6">
+<h2 class="font-title-lg text-title-lg text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-container">reviews</span>
+                            Recent Reviews
+                        </h2>
+<button class="font-label-lg text-label-lg text-primary hover:underline bg-transparent border-none cursor-pointer">
+                            View All
+                        </button>
+</div>
+<div class="flex flex-col gap-4">
+<!-- Review 1 -->
+<div class="border border-outline-variant rounded-lg p-4 bg-surface-container-low">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-title-lg font-bold">
+                                        M
+                                    </div>
+<div>
+<span class="block font-label-lg text-label-lg text-on-surface">Muhammad Ali</span>
+<span class="block font-body-sm text-body-sm text-on-surface-variant">Senior Mason • Hired Oct 2023</span>
+</div>
+</div>
+<div class="flex text-secondary-container">
+<span class="material-symbols-outlined text-[16px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                                "Excellent employer. Payments are always on time, and the site supervisors are respectful and clear with instructions. Highly recommend working on their projects."
+                            </p>
+</div>
+<!-- Review 2 -->
+<div class="border border-outline-variant rounded-lg p-4 bg-surface-container-low">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-title-lg font-bold">
+                                        Z
+                                    </div>
+<div>
+<span class="block font-label-lg text-label-lg text-on-surface">Zahid Hussain</span>
+<span class="block font-body-sm text-body-sm text-on-surface-variant">Electrician • Hired Sep 2023</span>
+</div>
+</div>
+<div class="flex text-secondary-container">
+<span class="material-symbols-outlined text-[16px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]">star_half</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                                "Good working environment. Safety standards are high on site. Sometimes materials arrive a bit late, but overall a solid company to work for."
+                            </p>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column: Sidebar -->
+<div class="flex flex-col gap-6">
+<!-- Contact Info Widget -->
+<section class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 shadow-sm">
+<h3 class="font-title-lg text-title-lg mb-4 text-on-surface">Contact Information</h3>
+<ul class="flex flex-col gap-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-on-surface-variant mt-0.5">call</span>
+<div>
+<span class="block font-label-md text-label-md text-on-surface-variant">Phone</span>
+<span class="font-body-md text-body-md">+92 300 1234567</span>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-on-surface-variant mt-0.5">mail</span>
+<div>
+<span class="block font-label-md text-label-md text-on-surface-variant">Email</span>
+<span class="font-body-md text-body-md">contact@khanconstructions.com</span>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-on-surface-variant mt-0.5">map</span>
+<div>
+<span class="block font-label-md text-label-md text-on-surface-variant">Office Location</span>
+<span class="font-body-md text-body-md">Suite 405, Trade Tower, I.I. Chundrigar Road, Karachi</span>
+</div>
+</li>
+</ul>
+</section>
+<!-- Active Jobs Widget -->
+<section class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 shadow-sm">
+<div class="flex items-center justify-between mb-4">
+<h3 class="font-title-lg text-title-lg text-on-surface">Currently Hiring</h3>
+<span class="bg-primary-container text-on-primary-container font-label-sm px-2 py-1 rounded-full">3 Active</span>
+</div>
+<ul class="flex flex-col gap-3">
+<li class="p-3 border border-outline-variant rounded-lg hover:border-primary cursor-pointer transition-colors">
+<span class="block font-label-lg text-label-lg text-primary mb-1">Expert Tile Fixer</span>
+<span class="block font-body-sm text-body-sm text-on-surface-variant">Gulshan-e-Iqbal Site • Posted 2d ago</span>
+</li>
+<li class="p-3 border border-outline-variant rounded-lg hover:border-primary cursor-pointer transition-colors">
+<span class="block font-label-lg text-label-lg text-primary mb-1">Plumber Foreman</span>
+<span class="block font-body-sm text-body-sm text-on-surface-variant">DHA Phase 6 Site • Posted 4d ago</span>
+</li>
+<li class="p-3 border border-outline-variant rounded-lg hover:border-primary cursor-pointer transition-colors">
+<span class="block font-label-lg text-label-lg text-primary mb-1">General Laborers (x10)</span>
+<span class="block font-body-sm text-body-sm text-on-surface-variant">Clifton Site • Posted 1w ago</span>
+</li>
+</ul>
+<button class="w-full mt-4 bg-transparent text-primary border border-primary font-label-lg text-label-lg py-2 rounded-lg hover:bg-primary-container transition-colors">
+                        View All Jobs
+                    </button>
+</section>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Visible on mobile/tablet, hide on desktop if needed, but requested as standard) -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 py-2 bg-surface-container-lowest border-t border-outline-variant shadow-sm z-50 md:hidden">
+<div class="flex flex-col items-center justify-center text-on-surface-variant py-1 cursor-pointer transition-all duration-200 active:scale-95 hover:bg-surface-container-high rounded-lg px-2">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-sm text-label-sm mt-1">Dashboard</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant py-1 cursor-pointer transition-all duration-200 active:scale-95 hover:bg-surface-container-high rounded-lg px-2">
+<span class="material-symbols-outlined">add_circle</span>
+<span class="font-label-sm text-label-sm mt-1">Post Job</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant py-1 cursor-pointer transition-all duration-200 active:scale-95 hover:bg-surface-container-high rounded-lg px-2">
+<span class="material-symbols-outlined">people</span>
+<span class="font-label-sm text-label-sm mt-1">Applicants</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant py-1 cursor-pointer transition-all duration-200 active:scale-95 hover:bg-surface-container-high rounded-lg px-2">
+<span class="material-symbols-outlined">chat</span>
+<span class="font-label-sm text-label-sm mt-1">Chat</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-4 py-1 cursor-pointer transition-all duration-200 active:scale-95">
+<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 1;">business</span>
+<span class="font-label-sm text-label-sm mt-1">Profile</span>
+</div>
+</nav>
+</body></html>

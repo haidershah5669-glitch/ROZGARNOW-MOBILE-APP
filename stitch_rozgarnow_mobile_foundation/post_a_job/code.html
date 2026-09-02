@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RozgarNow - Post a Job</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Work Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed": "#7ffc97",
+                        "primary-fixed-dim": "#62df7d",
+                        "tertiary-fixed": "#ffd9de",
+                        "surface-tint": "#006e2d",
+                        "on-secondary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "surface-container": "#e5eeff",
+                        "primary-container": "#00873a",
+                        "on-secondary-fixed-variant": "#783200",
+                        "on-primary-container": "#f7fff2",
+                        "background": "#f8f9ff",
+                        "outline": "#6e7b6c",
+                        "on-tertiary-container": "#fffbff",
+                        "tertiary": "#a72d51",
+                        "on-surface": "#0b1c30",
+                        "tertiary-container": "#c74669",
+                        "secondary-fixed": "#ffdbca",
+                        "inverse-on-surface": "#eaf1ff",
+                        "secondary": "#9d4300",
+                        "on-primary": "#ffffff",
+                        "warning-container": "#FFEDD5",
+                        "inverse-surface": "#213145",
+                        "on-primary-fixed": "#002109",
+                        "on-primary-fixed-variant": "#005320",
+                        "on-secondary-fixed": "#341100",
+                        "surface-dim": "#D5DCD1",
+                        "surface-container-low": "#eff4ff",
+                        "tertiary-fixed-dim": "#ffb2bf",
+                        "secondary-fixed-dim": "#ffb690",
+                        "error-container": "#ffdad6",
+                        "success-container": "#DCFCE7",
+                        "surface-bright": "#f8f9ff",
+                        "surface": "#f8f9ff",
+                        "primary": "#006b2c",
+                        "outline-variant": "#bdcaba",
+                        "secondary-container": "#fd761a",
+                        "surface-light": "#F4FCF0",
+                        "on-background": "#0b1c30",
+                        "on-secondary-container": "#5c2400",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-high": "#dce9ff",
+                        "on-surface-variant": "#3e4a3d",
+                        "on-tertiary-fixed-variant": "#8a143c",
+                        "info-blue": "#0284C7",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed": "#3f0016",
+                        "on-error": "#ffffff",
+                        "surface-variant": "#d3e4fe",
+                        "inverse-primary": "#62df7d",
+                        "surface-container-highest": "#d3e4fe",
+                        "surface-container-lowest": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "grid-margin": "24px",
+                        "base": "4px",
+                        "grid-gutter": "16px",
+                        "section-padding": "32px",
+                        "component-gap": "12px"
+                    },
+                    "fontFamily": {
+                        "headline-sm": ["Work Sans"],
+                        "headline-md": ["Work Sans"],
+                        "label-md": ["Work Sans"],
+                        "body-sm": ["Work Sans"],
+                        "title-lg": ["Work Sans"],
+                        "headline-lg": ["Work Sans"],
+                        "label-sm": ["Work Sans"],
+                        "body-md": ["Work Sans"],
+                        "body-lg": ["Work Sans"],
+                        "label-lg": ["Work Sans"]
+                    },
+                    "fontSize": {
+                        "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+                        "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+                        "title-lg": ["18px", { "lineHeight": "26px", "fontWeight": "600" }],
+                        "headline-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        /* Hide scrollbar for clean horizontal scrolling */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+        
+        /* Custom Input Focus Ring */
+        .custom-input:focus-within {
+            border-color: theme('colors.primary');
+            box-shadow: 0 0 0 1px theme('colors.primary');
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface-light min-h-screen font-sans text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-on-surface w-full top-0 sticky border-b border-outline-variant dark:border-outline flat no shadows z-40">
+<div class="flex items-center justify-between px-grid-margin h-16 w-full max-w-[1440px] mx-auto">
+<!-- Leading Icon -->
+<button class="text-on-surface-variant dark:text-outline-variant hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors cursor-pointer active:opacity-70 p-2 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<!-- Headline / Brand -->
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed">
+                RozgarNow
+            </div>
+<!-- Trailing Icon -->
+<button class="text-on-surface-variant dark:text-outline-variant hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors cursor-pointer active:opacity-70 p-2 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+</div>
+</header>
+<!-- Main Workspace Content -->
+<main class="w-full max-w-[1440px] mx-auto px-4 md:px-grid-margin pt-section-padding pb-[120px]">
+<!-- Contextual Header -->
+<div class="flex items-center gap-4 mb-8">
+<button class="p-2 rounded-full hover:bg-surface-variant transition-colors flex items-center justify-center text-on-surface-variant group">
+<span class="material-symbols-outlined group-hover:text-primary transition-colors">arrow_back</span>
+</button>
+<h1 class="font-headline-lg text-headline-lg text-on-surface">Create a Job Post</h1>
+</div>
+<!-- Form Canvas (Bento-inspired Grid) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-grid-gutter items-start">
+<!-- Main Details Card -->
+<div class="lg:col-span-8 bg-surface-container-lowest border border-outline-variant rounded-xl p-6 md:p-8 shadow-sm">
+<h2 class="font-title-lg text-title-lg mb-6 border-b border-outline-variant pb-4">Job Details</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Job Title -->
+<div class="md:col-span-2 flex flex-col gap-2">
+<label class="font-label-lg text-label-lg text-on-surface">Job Title <span class="text-tertiary">*</span></label>
+<div class="border border-outline-variant rounded-lg bg-surface-lowest flex items-center px-4 py-3 custom-input transition-all">
+<span class="material-symbols-outlined text-on-surface-variant mr-3">work</span>
+<input class="w-full bg-transparent border-none p-0 focus:ring-0 font-body-lg text-body-lg text-on-surface placeholder:text-on-surface-variant/50 outline-none" placeholder="e.g. Senior Mason, Delivery Driver" type="text"/>
+</div>
+</div>
+<!-- Category -->
+<div class="flex flex-col gap-2">
+<label class="font-label-lg text-label-lg text-on-surface">Category <span class="text-tertiary">*</span></label>
+<div class="border border-outline-variant rounded-lg bg-surface-lowest flex items-center px-4 py-3 custom-input transition-all relative">
+<span class="material-symbols-outlined text-on-surface-variant mr-3">category</span>
+<select class="w-full bg-transparent border-none p-0 focus:ring-0 font-body-lg text-body-lg text-on-surface appearance-none outline-none cursor-pointer pr-8">
+<option disabled="" selected="" value="">Select industry</option>
+<option value="construction">Construction</option>
+<option value="logistics">Logistics &amp; Delivery</option>
+<option value="hospitality">Hospitality</option>
+<option value="manufacturing">Manufacturing</option>
+</select>
+<span class="material-symbols-outlined text-on-surface-variant absolute right-4 pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Workers Needed -->
+<div class="flex flex-col gap-2">
+<label class="font-label-lg text-label-lg text-on-surface">Workers Needed <span class="text-tertiary">*</span></label>
+<div class="border border-outline-variant rounded-lg bg-surface-lowest flex items-center px-4 py-3 custom-input transition-all">
+<span class="material-symbols-outlined text-on-surface-variant mr-3">group</span>
+<input class="w-full bg-transparent border-none p-0 focus:ring-0 font-body-lg text-body-lg text-on-surface placeholder:text-on-surface-variant/50 outline-none" min="1" placeholder="e.g. 5" type="number"/>
+</div>
+</div>
+<!-- Description -->
+<div class="md:col-span-2 flex flex-col gap-2">
+<label class="font-label-lg text-label-lg text-on-surface">Job Description</label>
+<div class="border border-outline-variant rounded-lg bg-surface-lowest flex p-4 custom-input transition-all">
+<textarea class="w-full bg-transparent border-none p-0 focus:ring-0 font-body-lg text-body-lg text-on-surface placeholder:text-on-surface-variant/50 outline-none resize-y" placeholder="Describe the responsibilities, work hours, and any specific requirements..." rows="4"></textarea>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-right mt-1">0 / 500 characters</p>
+</div>
+</div>
+</div>
+<!-- Sidebar Context: Compensation & Logistics -->
+<div class="lg:col-span-4 flex flex-col gap-grid-gutter">
+<!-- Compensation Card -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 shadow-sm">
+<h2 class="font-title-lg text-title-lg mb-6 border-b border-outline-variant pb-4">Compensation</h2>
+<div class="flex flex-col gap-6">
+<!-- Salary Amount & Currency -->
+<div class="flex flex-col gap-2">
+<label class="font-label-lg text-label-lg text-on-surface">Salary Amount</label>
+<div class="border border-outline-variant rounded-lg bg-surface-lowest flex items-center px-4 py-3 custom-input transition-all">
+<span class="font-body-lg text-on-surface-variant mr-2 font-bold">₹</span>
+<input class="w-full bg-transparent border-none p-0 focus:ring-0 font-body-lg text-body-lg text-on-surface placeholder:text-on-surface-variant/50 outline-none" placeholder="0.00" type="number"/>
+</div>
+</div>
+<!-- Salary Type (Segmented Control style) -->
+<div class="flex flex-col gap-2">
+<label class="font-label-lg text-label-lg text-on-surface">Payment Frequency</label>
+<div class="grid grid-cols-2 gap-2 bg-surface-variant p-1 rounded-lg">
+<label class="cursor-pointer">
+<input checked="" class="peer sr-only" name="salary_type" type="radio"/>
+<div class="text-center py-2 rounded-md font-label-md text-label-md text-on-surface-variant peer-checked:bg-surface-container-lowest peer-checked:text-primary peer-checked:shadow-sm transition-all">
+                                        Daily
+                                    </div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="salary_type" type="radio"/>
+<div class="text-center py-2 rounded-md font-label-md text-label-md text-on-surface-variant peer-checked:bg-surface-container-lowest peer-checked:text-primary peer-checked:shadow-sm transition-all">
+                                        Weekly
+                                    </div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="salary_type" type="radio"/>
+<div class="text-center py-2 rounded-md font-label-md text-label-md text-on-surface-variant peer-checked:bg-surface-container-lowest peer-checked:text-primary peer-checked:shadow-sm transition-all">
+                                        Monthly
+                                    </div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="salary_type" type="radio"/>
+<div class="text-center py-2 rounded-md font-label-md text-label-md text-on-surface-variant peer-checked:bg-surface-container-lowest peer-checked:text-primary peer-checked:shadow-sm transition-all">
+                                        Fixed
+                                    </div>
+</label>
+</div>
+</div>
+</div>
+</div>
+<!-- Logistics Card -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 shadow-sm">
+<h2 class="font-title-lg text-title-lg mb-6 border-b border-outline-variant pb-4">Logistics</h2>
+<div class="flex flex-col gap-6">
+<!-- Job Type -->
+<div class="flex flex-col gap-2">
+<label class="font-label-lg text-label-lg text-on-surface">Job Type</label>
+<div class="flex flex-col gap-2">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 text-primary border-outline-variant focus:ring-primary focus:ring-offset-surface-lowest" name="job_type" type="radio"/>
+<span class="font-body-md text-body-md text-on-surface group-hover:text-primary transition-colors">One Day Contract</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 text-primary border-outline-variant focus:ring-primary focus:ring-offset-surface-lowest" name="job_type" type="radio"/>
+<span class="font-body-md text-body-md text-on-surface group-hover:text-primary transition-colors">Part Time</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="w-5 h-5 text-primary border-outline-variant focus:ring-primary focus:ring-offset-surface-lowest" name="job_type" type="radio"/>
+<span class="font-body-md text-body-md text-on-surface group-hover:text-primary transition-colors">Full Time</span>
+</label>
+</div>
+</div>
+<!-- Location -->
+<div class="flex flex-col gap-2">
+<label class="font-label-lg text-label-lg text-on-surface">City &amp; Area</label>
+<div class="border border-outline-variant rounded-lg bg-surface-lowest flex items-center px-4 py-3 custom-input transition-all">
+<span class="material-symbols-outlined text-on-surface-variant mr-3">location_on</span>
+<input class="w-full bg-transparent border-none p-0 focus:ring-0 font-body-lg text-body-lg text-on-surface placeholder:text-on-surface-variant/50 outline-none" placeholder="e.g. Andheri East, Mumbai" type="text"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Full Width Section: Requirements & Media -->
+<div class="lg:col-span-12 bg-surface-container-lowest border border-outline-variant rounded-xl p-6 md:p-8 shadow-sm">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Required Skills -->
+<div class="flex flex-col gap-4">
+<div>
+<h2 class="font-title-lg text-title-lg mb-1">Required Skills</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Add up to 5 key skills.</p>
+</div>
+<div class="border border-outline-variant rounded-lg bg-surface-lowest flex flex-col p-2 custom-input transition-all gap-2">
+<!-- Selected Chips -->
+<div class="flex flex-wrap gap-2 px-2 pt-2">
+<span class="inline-flex items-center gap-1 bg-surface-variant text-on-surface px-3 py-1 rounded-full font-label-sm text-label-sm border border-outline-variant/50">
+                                    Plumbing
+                                    <button class="material-symbols-outlined text-[14px] hover:text-error transition-colors">close</button>
+</span>
+<span class="inline-flex items-center gap-1 bg-surface-variant text-on-surface px-3 py-1 rounded-full font-label-sm text-label-sm border border-outline-variant/50">
+                                    Pipe Fitting
+                                    <button class="material-symbols-outlined text-[14px] hover:text-error transition-colors">close</button>
+</span>
+</div>
+<!-- Input -->
+<div class="flex items-center px-2 pb-1">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px] mr-2">search</span>
+<input class="w-full bg-transparent border-none p-1 focus:ring-0 font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant/50 outline-none" placeholder="Type a skill and press Enter..." type="text"/>
+</div>
+</div>
+</div>
+<!-- Photo Upload -->
+<div class="flex flex-col gap-4">
+<div>
+<h2 class="font-title-lg text-title-lg mb-1">Worksite Photos</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Upload images of the site or required tools (Optional).</p>
+</div>
+<div class="border-2 border-dashed border-outline-variant rounded-xl bg-surface-container-low p-8 flex flex-col items-center justify-center text-center hover:bg-surface-variant transition-colors cursor-pointer group">
+<div class="w-12 h-12 rounded-full bg-surface-lowest shadow-sm flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-[24px]">cloud_upload</span>
+</div>
+<span class="font-label-lg text-label-lg text-primary mb-1">Click to upload</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">or drag and drop</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-2 opacity-70">PNG, JPG up to 5MB</span>
+</div>
+</div>
+</div>
+<!-- Action Area -->
+<div class="mt-8 pt-6 border-t border-outline-variant flex items-center justify-end gap-4">
+<button class="px-6 py-3 rounded-lg font-label-lg text-label-lg text-on-surface-variant bg-transparent hover:bg-surface-variant transition-colors">
+                        Save as Draft
+                    </button>
+<button class="px-8 py-3 rounded-lg font-label-lg text-label-lg text-on-primary bg-primary hover:bg-primary-fixed-variant shadow-sm hover:shadow-md transition-all active:scale-95 flex items-center gap-2">
+<span>Preview Post</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="bg-surface-container-lowest dark:bg-inverse-surface fixed bottom-0 w-full z-50 border-t border-outline-variant dark:border-outline shadow-sm fixed bottom-0 left-0 w-full flex justify-around items-center px-4 py-2">
+<!-- Dashboard (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant py-1 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-all duration-200 active:scale-95 rounded-lg px-2" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-label-sm text-label-sm mt-1">Dashboard</span>
+</a>
+<!-- Post Job (Active) -->
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container dark:bg-primary-fixed dark:text-on-primary-fixed rounded-full px-4 py-1 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-all duration-200 active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="add_circle" data-weight="fill" style="font-variation-settings: 'FILL' 1;">add_circle</span>
+<span class="font-label-sm text-label-sm mt-1">Post Job</span>
+</a>
+<!-- Applicants (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant py-1 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-all duration-200 active:scale-95 rounded-lg px-2" href="#">
+<span class="material-symbols-outlined" data-icon="people">people</span>
+<span class="font-label-sm text-label-sm mt-1">Applicants</span>
+</a>
+<!-- Chat (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant py-1 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-all duration-200 active:scale-95 rounded-lg px-2" href="#">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+<span class="font-label-sm text-label-sm mt-1">Chat</span>
+</a>
+<!-- Profile (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant py-1 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-all duration-200 active:scale-95 rounded-lg px-2" href="#">
+<span class="material-symbols-outlined" data-icon="business">business</span>
+<span class="font-label-sm text-label-sm mt-1">Profile</span>
+</a>
+</nav>
+</body></html>
